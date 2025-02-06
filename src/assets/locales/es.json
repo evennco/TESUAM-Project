@@ -1,0 +1,60 @@
+{
+  "phrasesbanner": [
+    {
+      "text": "Conoce nuestras historias de impacto y esperanza."
+    },
+    {
+      "text": "Juntos transformamos vidas en la Amazonía Colombiana."
+    },
+    {
+      "text": "Más de 120 niñas protegidas y empoderadas gracias a tu apoyo"
+    },
+    {
+      "text": "Sé parte del cambio. Dona hoy y haz la diferencia"
+    },
+    {
+      "text": "Haz un aporte en menos de 3 minutos desde tu celular o computador."
+    }
+  ],
+  "titles": [
+    {
+      "stadisticsyellow": "Tejiendo esperanza",
+      "stadisticsred": "Nuestro impacto hasta ahora"
+    },
+    {
+      "projectsyellow": "Tejiendo cambios",
+      "projectsred": "Conoce nuestros proyectos"
+    },
+    {
+      "videosyellow": "Tejiendo cambios",
+      "videosred": "Historias transformadoras"
+    },
+    {
+      "volunteeryellow": "Apóyanos a través de",
+      "volunteerred": "Voluntariado"
+    }
+  ],
+  "buttons": [
+    {
+      "more": "Conoce más"
+    },
+    {
+      "donate": "Haz tu donación"
+    }
+  ],
+  "carrousel": [
+    {
+      "title": "Conoce nuestras historias de impacto y esperanza.",
+      "description": "Descubre cómo juntos transformamos vidas en la Amazonía Colombiana."
+    },
+    {
+      "title": "Más de 120 niñas protegidas y empoderadas gracias a tu apoyo",
+      "description": "Sé parte del cambio. Dona hoy y haz la diferencia"
+    },
+    {
+      "title": "Haz un aporte en menos de 3 minutos desde tu celular o computador.",
+      "description": "Con tu donación, apoyas a más de 120 niñas en la Amazonía Colombiana."
+    }
+  ]
+  
+}

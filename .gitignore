@@ -13,6 +13,14 @@
 # testing
 /coverage
 
+# DB
+/db/seed.ts
+/db/sqlite.db
+/db/debug-db.ts
+/db/migrations/*
+
+
+
 # next.js
 /.next/
 /out/
