@@ -38,6 +38,11 @@ export interface BigMiniTitleProps {
     title: string;
     subtitle: string;
 }
+export interface bibleQuotationProps {
+    title: string;
+    quotation: string;
+}
+
 export interface VideocardProps {
     videoUrl:string, 
     title:string, 

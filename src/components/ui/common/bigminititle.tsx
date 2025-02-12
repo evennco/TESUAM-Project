@@ -8,4 +8,4 @@ const BigMiniTitle = ({ title, subtitle }: BigMiniTitleProps) => {
         </div>
     );
 }
-export default BigMiniTitle;
+export default BigMiniTitle; 
