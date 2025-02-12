@@ -1,6 +1,6 @@
 'use client'
-import {FiAlignJustify} from 'react-icons/fi';
-import {FaHeart} from 'react-icons/fa6';
+import { FiAlignJustify } from 'react-icons/fi';
+import { FaHeart } from 'react-icons/fa6';
 import { useState } from 'react';
 import Image from 'next/image';
 import Frases from '@/components/ui/common/Phrases';
@@ -40,13 +40,13 @@ export default function NavBar() {
             <p className="flex items-center"></p>
           </Link>
           <div className="flex items-center lg:order-2">
-            <a href="#" className="flex items-center text-gray-800 dark:text-white bg-foundationcoloryellow1 hover:bg-foundationcoloryellow2 focus:ring-4 focus:ring-gray-300 font-medium rounded-2xl text-sm px-2 lg:px-3 py-1 lg:py-1 mr-2 dark:hover:bg-foundationcoloryellow2 focus:outline-none dark:focus:ring-gray-800">
+            <a href="#" className="flex items-center text-gray-800 dark:text-white bg-foundationcoloryellow1 hover:bg-foundationcoloryellow2 hover:text-foundationcoloryellow2 focus:ring-4 focus:ring-gray-300 font-medium rounded-2xl text-sm px-2 lg:px-3 py-1 lg:py-1 mr-2 dark:hover:bg-foundationcoloryellow2 focus:outline-none dark:focus:ring-gray-800">
               <FaHeart className="w-4 h-4 mr-2" />
               Donar
             </a>
             {isAuthenticated && (
               <Link href="/admin">
-                <a className="flex items-center text-gray-800 dark:text-white bg-foundationcoloryellow1 hover:bg-foundationcoloryellow2 focus:ring-4 focus:ring-gray-300 font-medium rounded-2xl text-sm px-2 lg:px-3 py-1 lg:py-1 mr-2 dark:hover:bg-foundationcoloryellow2 focus:outline-none dark:focus:ring-gray-800">
+                <a className="flex items-center text-gray-800 dark:text-white bg-foundationcoloryellow1 hover:bg-foundationcoloryellow2 hover:text-foundationcoloryellow2 focus:ring-4 focus:ring-gray-300 font-medium rounded-2xl text-sm px-2 lg:px-3 py-1 lg:py-1 mr-2 dark:hover:bg-foundationcoloryellow2 focus:outline-none dark:focus:ring-gray-800">
                   Admin Panel
                 </a>
               </Link>
@@ -76,8 +76,8 @@ export default function NavBar() {
                 </Link>
               </li>
               <li>
-                <Link href="/projects" replace>
-                  <p className={getLinkClass('/projects')}>Proyectos</p>
+                <Link href="/projectspage" replace>
+                  <p className={getLinkClass('/projectspage')}>Proyectos</p>
                 </Link>
               </li>
               <li>
