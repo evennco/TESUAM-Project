@@ -15,10 +15,10 @@ const ProjectsCards = ({ image, title, text }: ProjectsCardProps) => {
 
             <div className="relative z-10 mt-auto p-6 group-hover:hidden transition-opacity duration-300">
                 <div className="flex justify-start space-x-2">
-                    <span className="bg-blue-500 text-white text-sm font-semibold rounded px-3 py-1">
+                    <span className="bg-blue-500 text-white text-sm font-semibold px-3 py-1 rounded-full">
                         Label Azul
                     </span>
-                    <span className="bg-green-500 text-white text-xs font-semibold rounded px-2 py-1">
+                    <span className="bg-green-500 text-white text-xs font-semibold px-2 py-1 rounded-full">
                         Label Verde
                     </span>
                 </div>

@@ -34,6 +34,10 @@ export interface BigTitleProps {
     title: string;
     subtitle: string;
 }
+export interface BigMiniTitleProps {
+    title: string;
+    subtitle: string;
+}
 export interface VideocardProps {
     videoUrl:string, 
     title:string, 
