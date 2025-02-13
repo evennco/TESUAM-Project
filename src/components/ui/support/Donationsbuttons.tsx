@@ -1,12 +1,10 @@
-"use client"
-import React from 'react';
 import BigTitle from "@/components/ui/common/bigtitle";
 import phrases from '@/assets/locales/es.json';
 import { volunteer } from '@/lib/faqs';
 import FAQ from '@/components/ui/common/FAQ'
 import ContactForm from '@/components/ui/common/contactform';
 
-const ProjectForms: React.FC = () => {
+const Donationsbuttons: React.FC = () => {
 
     return (
         <section className="bg-white dark:bg-foundationcolorwhite">
@@ -21,4 +19,4 @@ const ProjectForms: React.FC = () => {
     );
 }
 
-export default ProjectForms;
+export default Donationsbuttons;

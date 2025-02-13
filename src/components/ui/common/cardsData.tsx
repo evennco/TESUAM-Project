@@ -5,10 +5,9 @@ export const CARDS_DATA = [
       description: "Conoce el gran impacto que puedes generar con tu aporte.",
       modalContent: (
         <>
-          <h2 className="text-xl font-bold mb-4">Más detalles: ¿Por qué donar?</h2>
-          <p>
-            Aquí puedes agregar información adicional sobre el impacto de las
-            donaciones y cómo ayudan a la causa...
+          <h2 className="text-3xl font-bold mb-4 text-foundationcolorred1">Más detalles: ¿Por qué donar?</h2>
+          <p className="text-justify p-4">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis quia, amet doloremque voluptatem quisquam praesentium nesciunt, distinctio nisi ut accusantium assumenda reiciendis aut voluptatum eius fugiat omnis ab, obcaecati in? Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni voluptatem vel, libero optio aliquam in fugit deserunt nobis cumque voluptatum neque quis explicabo sequi autem pariatur eos. Rem, similique facere. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae error, unde ut fugit accusantium dolorum soluta voluptatum praesentium amet a modi, facere reiciendis! Quia tenetur, explicabo illum iste nemo est. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non laudantium voluptatibus voluptatum assumenda voluptas nulla recusandae dolor rem ducimus, et eos. Voluptatibus minus eligendi officia. Saepe harum facere dolor fuga? Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim sequi velit nisi blanditiis praesentium voluptatibus beatae odit itaque, quisquam fugit nam explicabo! Nihil qui quisquam doloribus illum voluptatem repellendus mollitia. Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus non sit ipsum dolore ratione enim saepe atque maiores voluptas molestiae nesciunt officiis quas quos ipsam eos dicta numquam, magni accusantium. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae omnis debitis deserunt, illo ipsam eum nulla officiis et distinctio autem dolor unde quisquam animi ipsa itaque magni accusantium perspiciatis nemo!
           </p>
         </>
       ),
@@ -18,8 +17,10 @@ export const CARDS_DATA = [
       description: "Conoce los medios en los que puedes contribuir a nuestra misión.",
       modalContent: (
         <>
-          <h2 className="text-xl font-bold mb-4">Formas de donar</h2>
-          <p>Puedes donar en efectivo, tarjeta, transferencia, etc.</p>
+          <h2 className="text-3xl mb-4 font-bold text-foundationcolorred1">Formas de donar</h2>
+          <p className="text-justify p-4">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis quia, amet doloremque voluptatem quisquam praesentium nesciunt, distinctio nisi ut accusantium assumenda reiciendis aut voluptatum eius fugiat omnis ab, obcaecati in? Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni voluptatem vel, libero optio aliquam in fugit deserunt nobis cumque voluptatum neque quis explicabo sequi autem pariatur eos. Rem, similique facere. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae error, unde ut fugit accusantium dolorum soluta voluptatum praesentium amet a modi, facere reiciendis! Quia tenetur, explicabo illum iste nemo est. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non laudantium voluptatibus voluptatum assumenda voluptas nulla recusandae dolor rem ducimus, et eos. Voluptatibus minus eligendi officia. Saepe harum facere dolor fuga? Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim sequi velit nisi blanditiis praesentium voluptatibus beatae odit itaque, quisquam fugit nam explicabo! Nihil qui quisquam doloribus illum voluptatem repellendus mollitia. Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus non sit ipsum dolore ratione enim saepe atque maiores voluptas molestiae nesciunt officiis quas quos ipsam eos dicta numquam, magni accusantium. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae omnis debitis deserunt, illo ipsam eum nulla officiis et distinctio autem dolor unde quisquam animi ipsa itaque magni accusantium perspiciatis nemo!
+          </p>
         </>
       ),
     },
@@ -29,10 +30,8 @@ export const CARDS_DATA = [
       modalContent: (
         <>
           <h2 className="text-xl font-bold mb-4">Beneficios de donar</h2>
-          <ul className="list-disc list-inside">
+          <ul className="list-disc list-inside p-4">
             <li>Deducciones de impuestos</li>
-            <li>Sentido de pertenencia</li>
-            <li>... y más beneficios</li>
           </ul>
         </>
       ),

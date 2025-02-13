@@ -57,3 +57,7 @@ export interface DonateButtonProps {
 export interface MoreButtonProps {
   text: string;
 }
+export interface FAQItem {
+    question: string;
+    answer: string;
+  }

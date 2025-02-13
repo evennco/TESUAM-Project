@@ -22,7 +22,7 @@ const ProjectsCards = ({ image, title, text }: ProjectsCardProps) => {
                         Label Verde
                     </span>
                 </div>
-                <h3 className="mb-2 text-2xl font-semibold text-foundationcolorblack mt-8">{title}</h3>
+                <h3 className="mb-2 text-2xl font-semibold text-foundationcolorblack mt-2">{title}</h3>
                 <p className="font-light text-foundationcolorblack">{text}</p>
             </div>
 
