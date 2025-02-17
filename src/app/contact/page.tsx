@@ -1,10 +1,19 @@
-export default function Contact() {
-    return (
-      <main className="flex flex-col text-center justify-center items-center">
-        <div className="w-full flex-grow">
-          <h1 className="text-4xl font-bold">Contact</h1>
-          <p className="mt-4 text-lg">This is the Contact page of our website.</p>
-        </div>
-      </main>
-    );
-  }
+import Carrousel from '@/components/ui/contact/carrousel';
+import SocialMedia from '@/components/ui/contact/socialmedia';
+import Emails from '@/components/ui/contact/emails';
+import News from '@/components/ui/contact/news';
+import Faq from '@/components/ui/contact/faq';
+import Pqrsf from '@/components/ui/contact/pqrsf';
+
+export default function ContactPage() {
+  return (
+    <main>
+      <Carrousel />
+      <SocialMedia />
+      <Emails />
+      <News />
+      <Faq />
+      <Pqrsf />
+    </main>
+  );
+}
