@@ -5,11 +5,11 @@ import BigTitle from "@/components/ui/common/bigtitle";
 import BigMiniTitle from "../common/bigminititle";
 import phrases from '@/assets/locales/es.json';
 import HashtagBanner from '@/components/ui/common/HashtagBanner';
-const Projects: React.FC = () => {
+const ProjectsComponent: React.FC = () => {
     return (
         <section className="bg-white dark:bg-foundationcolorwhite">
             <div className="pb-8 px-4 mx-auto max-w-screen-xl lg:pb-16">
-                <BigMiniTitle title = {phrases.titles[1].projectsyellow || "Default Title"} subtitle={phrases.titles[1].projectsred || "Default Subtitle"} />
+                
                 <div className="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10 lg:space-y-0">
                     <ProjectsCards image={carrousel1} title="titulo 1" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tristique suscipit metus, sed sagittis sem pellentesque ut. Sed sit amet nulla euismod odio finibus pharetra volutpat nec tellus." />
                     <ProjectsCards image={carrousel2} title="titulo 2" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tristique suscipit metus, sed sagittis sem pellentesque ut. Sed sit amet nulla euismod odio finibus pharetra volutpat nec tellus." />
@@ -19,4 +19,4 @@ const Projects: React.FC = () => {
         </section>
     )
 }
-export default Projects;
+export default ProjectsComponent;

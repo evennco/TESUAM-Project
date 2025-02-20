@@ -1,5 +1,3 @@
-"use client"
-import React from 'react';
 import BigTitle from "@/components/ui/common/bigtitle";
 import phrases from '@/assets/locales/es.json';
 import { volunteer } from '@/lib/faqs';
