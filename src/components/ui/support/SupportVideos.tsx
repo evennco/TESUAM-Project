@@ -4,7 +4,7 @@ import VideoCard from '../common/videocard';
 import BigTitle from "@/components/ui/common/bigtitle";
 import phrases from '@/assets/locales/es.json';
 
-const Stories: React.FC = () => {
+const SupportVideos: React.FC = () => {
   return (
     <section className="bg-white dark:bg-foundationcolorwhite">
       <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16">
@@ -28,4 +28,4 @@ const Stories: React.FC = () => {
   );
 }
 
-export default Stories;
+export default SupportVideos;

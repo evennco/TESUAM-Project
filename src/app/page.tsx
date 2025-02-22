@@ -9,7 +9,6 @@ import Contact from '@/components/ui/homepage/contact';
 import { carrouseldata } from '@/lib/utils';
 import { Suspense } from 'react';
 import LazyLoadComponent from '@/components/ui/common/LazyLoadComponent';
-
 export default function Home() {
   return (
     <main className="flex flex-col text-center justify-center items-center">
