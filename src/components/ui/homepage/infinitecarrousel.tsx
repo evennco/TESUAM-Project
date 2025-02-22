@@ -8,13 +8,13 @@ const InfiniteCarousel: React.FC = () => {
         <div className='slider overflow-hidden'>
             <div className='slide-track flex bg-slate-200'>
                 {infiniteCarrouselData.map((logo: InfiniteCarouselItem, index: number) => (
-                    <div key={index} className='slide'>
-                        <Image src={logo.src} alt={`logo-${index}`} />
+                    <div key={index} className='slide p-2'>
+                        <Image src={logo.src} alt={`logo-${index}`} className='w-full h-auto' />
                     </div>
                 ))}
                 {infiniteCarrouselData.map((logo: InfiniteCarouselItem, index: number) => (
-                    <div key={index + infiniteCarrouselData.length} className='slide'>
-                        <Image src={logo.src} alt={`logo-${index + infiniteCarrouselData.length}`} />
+                    <div key={index + infiniteCarrouselData.length} className='slide p-2'>
+                        <Image src={logo.src} alt={`logo-${index + infiniteCarrouselData.length}`} className='w-full h-auto' />
                     </div>
                 ))}
             </div>

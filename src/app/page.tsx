@@ -15,9 +15,9 @@ export default function Home() {
       <div className="w-full flex-grow">
         <Suspense fallback={<div>Loading...</div>}>
           <Carousel data={carrouseldata}>
-            <InfiniteCarousel />
           </Carousel>
         </Suspense>
+            <InfiniteCarousel />
         <div className="">
           <LazyLoadComponent>
             <Suspense fallback={<div>Loading...</div>}>

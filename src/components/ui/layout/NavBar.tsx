@@ -18,8 +18,8 @@ export default function NavBar() {
   const currentPath = usePathname();
   const getLinkClass = (path: string) => {
     return currentPath === path
-      ? 'block py-2 pr-4 pl-3 text-white rounded bg-foundationcoloryellow2 lg:bg-transparent lg:text-foundationcoloryellow2 lg:p-0 dark:text-foundationcoloryellow2'
-      : 'block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-foundationcoloryellow2 lg:p-0 dark:text-white lg:dark:hover:text-foundationcoloryellow2 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700';
+      ? 'block py-2 pr-4 pl-3 text-foundationcolorred2 rounded lg:bg-transparent lg:text-foundationcoloryellow2 lg:p-0 dark:text-foundationcoloryellow2'
+      : 'block py-2 pr-4 pl-3 text-gray-700 border-white-100 hover:bg-white-300 lg:hover:bg-transparent lg:border-0 lg:hover:text-foundationcoloryellow2 lg:p-0 dark:text-white lg:dark:hover:text-foundationcoloryellow2 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700';
   };
 
   return (

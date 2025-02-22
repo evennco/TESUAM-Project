@@ -21,7 +21,7 @@ const Carousel: React.FC<CarouselProps> = ({ data }) => {
 
     return (
         <div className="w-full flex flex-col items-center full-screen-height">
-            <div className='w-full h-screen overflow-hidden relative full-screen-height'>
+            <div className='w-full h-screen overflow-hidden relative full-screen-height sm:h-[90hv] md:h-[90hv] lg:h-[85vh] xl:h-[90vh]'>
                 <div ref={carouselRef}
                     style={{ transform: `translateX(-${currentImg * 100}%)` }}
                     className='w-full absolute flex transition-transform duration-300 full-screen-height'>
@@ -46,11 +46,6 @@ const Carousel: React.FC<CarouselProps> = ({ data }) => {
                     <DonateButton text={phrases.buttons[1].donate || 'Haz tu donación'} />
                     </div>
                 </div>
-            </div>
-            <div className='w-full flex justify-center space-x-2'>
-                <Suspense fallback={<div>Loading...</div>}>
-                    <InfiniteCarousel />
-                </Suspense>
             </div>
         </div>
     );
