@@ -6,8 +6,6 @@ import phrases from '@/assets/locales/es.json';
 import DonateButton from '@/components/ui/common/DonateButton';
 import MoreButton from '@/components/ui/common/MoreButton';
 
-const InfiniteCarousel = lazy(() => import('./infinitecarrousel'));
-
 const Carousel: React.FC<CarouselProps> = ({ data }) => {
     const [currentImg, setCurrentImg] = useState(0);
     const carouselRef = useRef<HTMLDivElement>(null);
@@ -21,7 +19,7 @@ const Carousel: React.FC<CarouselProps> = ({ data }) => {
 
     return (
         <div className="w-full flex flex-col items-center full-screen-height">
-            <div className='w-full h-screen overflow-hidden relative full-screen-height sm:h-[90hv] md:h-[90hv] lg:h-[85vh] xl:h-[90vh]'>
+            <div className='w-full h-screen overflow-hidden relative full-screen-height'>
                 <div ref={carouselRef}
                     style={{ transform: `translateX(-${currentImg * 100}%)` }}
                     className='w-full absolute flex transition-transform duration-300 full-screen-height'>

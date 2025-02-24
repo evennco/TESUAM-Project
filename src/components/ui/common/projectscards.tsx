@@ -10,6 +10,7 @@ const ProjectsCards = ({ image, title, text }: ProjectsCardProps) => {
                 src={image}
                 alt="Project Image"
                 fill
+                sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-125 group-hover:brightness-50"
             />
 

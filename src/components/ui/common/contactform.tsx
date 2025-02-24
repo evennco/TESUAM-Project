@@ -19,7 +19,7 @@ const ContactForm: React.FC = () => {
                 </div>
                 <div>
                     <label htmlFor="message" className="block text-sm font-medium text-foundationcolorblack dark:text-foundationcolorblack">Mensaje</label>
-                    <textarea id="message" rows={6} className="mt-1 block w-full p-4 border border-gray-300 rounded-md shadow-sm dark:placeholder-gray-400 dark:text-white bg-gray-500"></textarea>
+                    <textarea id="message" rows={2} className="resize-none field-sizing-content mt-1 block w-full p-4 border border-gray-300 rounded-md shadow-sm dark:placeholder-gray-400 dark:text-white bg-gray-500"></textarea>
                 </div>
                 <button type="submit" className="w-full bg-foundationcolorblack text-white py-3 px-4 rounded-md shadow-sm hover:bg-foundationcoloryellow2 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-foundationcolorblack">Enviar</button>
             </form>

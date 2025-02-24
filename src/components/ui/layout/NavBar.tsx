@@ -33,8 +33,7 @@ export default function NavBar() {
             <Image
               src={logo}
               alt="TESUAM Logo"
-              width={150}
-              height={60}
+              height={50}
               className="w-30 h-auto sm:w-36 sm:h-auto md:w-40 md:h-auto lg:w-40 lg:h-auto"
             />
             <p className="flex items-center"></p>

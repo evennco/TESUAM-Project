@@ -1,14 +1,10 @@
-"use client";
-
-import React from "react";
-
 export default function Carrousel() {
   return (
-    <section className="relative w-full h-[85vh] bg-foundationcolorred2 text-white flex items-center px-6 lg:px-8">
+    <section className="w-full h-[85vh] bg-foundationcolorred2 text-white flex items-center px-6 lg:px-8">
       <div className="py-8 px-4max-w-4xl mx-auto">
-        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 leading-tight">
+        <h1 className="text-4xl sm:text-4xl md:text-5xl font-bold mb-6">
           Conéctate con TESUAM
-          <br className="hidden lg:block" />
+          <br className="sm:hidden lg:block" />
           Juntos hacemos la diferencia.
         </h1>
         <p className="text-lg sm:text-xl md:text-2xl mb-8 leading-snug">

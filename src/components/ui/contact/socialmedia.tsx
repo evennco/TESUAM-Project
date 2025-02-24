@@ -34,19 +34,19 @@ export default function SocialMedia() {
           <li>Compartir esperanza con tu comunidad.</li>
         </ul>
         <div className="flex flex-wrap gap-6 text-3xl justify-start">
-          <a href="https://youtube.com" className="bg-white text-foundationcolorred1 w-16 h-16 flex items-center justify-center rounded-lg hover:text-foundationcolorred1">
+          <a href="https://youtube.com" className="bg-foundationcolorwhite text-foundationcolorred1 w-16 h-16 flex items-center justify-center rounded-lg hover:text-foundationcolorred1">
             <FaYoutube size={32} />
           </a>
-          <a href="https://facebook.com" className="bg-white text-foundationcolorred1 w-16 h-16 flex items-center justify-center rounded-lg hover:text-foundationcolorred1">
+          <a href="https://facebook.com" className="bg-foundationcolorwhite text-foundationcolorred1 w-16 h-16 flex items-center justify-center rounded-lg hover:text-foundationcolorred1">
             <FaFacebook size={32} />
           </a>
-          <a href="https://instagram.com" className="bg-white text-foundationcolorred1 w-16 h-16 flex items-center justify-center rounded-lg hover:text-foundationcolorred1">
+          <a href="https://instagram.com" className="bg-foundationcolorwhite text-foundationcolorred1 w-16 h-16 flex items-center justify-center rounded-lg hover:text-foundationcolorred1">
             <FaInstagram size={32} />
           </a>
-          <a href="https://linkedin.com" className="bg-white text-foundationcolorred1 w-16 h-16 flex items-center justify-center rounded-lg hover:text-foundationcolorred1">
+          <a href="https://linkedin.com" className="bg-foundationcolorwhite text-foundationcolorred1 w-16 h-16 flex items-center justify-center rounded-lg hover:text-foundationcolorred1">
             <FaLinkedin size={32} />
           </a>
-          <a href="https://twitter.com" className="bg-white text-foundationcolorred1 w-16 h-16 flex items-center justify-center rounded-lg hover:text-foundationcolorred1">
+          <a href="https://twitter.com" className="bg-foundationcolorwhite text-foundationcolorred1 w-16 h-16 flex items-center justify-center rounded-lg hover:text-foundationcolorred1">
             <FaXTwitter size={32} />
           </a>
         </div>
