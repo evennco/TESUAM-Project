@@ -26,6 +26,7 @@ export default function Home() {
             </Suspense>
           </LazyLoadComponent>
           <Projects />
+          
           <Stories />
           <Volunteer />
           <LazyLoadComponent>
