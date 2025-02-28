@@ -1,15 +1,11 @@
-"use client";
-
-import React from "react";
+import HashtagBanner from '@/components/ui/common/HashtagBanner';
 
 export default function Pqrsf() {
   return (
     <section id="pqrsf" className="bg-foundationcolorwhite dark:bg-foundationcolorwhite">
+      <HashtagBanner text="#TESUAM" />
       <div className="py-8 px-4 max-w-5xl mx-auto flex flex-col md:flex-row gap-8">
         <div className="md:w-1/2">
-          <span className="bg-foundationcolorred1 text-white py-1 px-3 rounded-full text-sm font-semibold">
-            #TESUAM
-          </span>
           <p className="text-sm text-foundationcoloryellow2 mt-2">
             Peticiones, Quejas, Reclamos, Sugerencias y Felicitaciones
           </p>
@@ -25,7 +21,6 @@ export default function Pqrsf() {
             formulario y te responderemos lo más pronto posible.
           </p>
         </div>
-
         <form className="md:w-1/2 flex flex-col space-y-4">
           <input
             type="text"
@@ -54,12 +49,10 @@ export default function Pqrsf() {
           </button>
         </form>
       </div>
-        <p className="text-xs max-w-5xl mx-auto text-foundationcolorblack text-opacity-50 ">
-          Recuerda que nuestros tiempos de respuesta pueden variar; responderemos a
-          tu solicitud a la mayor brevedad posible.
-        </p>
-            
-
+      <p className="text-xs max-w-5xl mx-auto text-foundationcolorblack text-opacity-50 ">
+        Recuerda que nuestros tiempos de respuesta pueden variar; responderemos a
+        tu solicitud a la mayor brevedad posible.
+      </p>
     </section>
   );
 }

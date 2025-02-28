@@ -9,16 +9,18 @@ import Contact from '@/components/ui/homepage/contact';
 import { carrouseldata } from '@/lib/utils';
 import { Suspense } from 'react';
 import LazyLoadComponent from '@/components/ui/common/LazyLoadComponent';
-
+import BigTitle from '@/components/ui/common/bigtitle';
+import { imagesSet1 } from '@/lib/cardslinksimages';
+import Links from '@/components/ui/common/LinksComponent';
 export default function Home() {
   return (
     <main className="flex flex-col text-center justify-center items-center">
-      <div className="w-full flex-grow">
+      <div className="w-full flex-grow bg-white dark:bg-foundationcolorwhite">
         <Suspense fallback={<div>Loading...</div>}>
           <Carousel data={carrouseldata}>
-            <InfiniteCarousel />
           </Carousel>
         </Suspense>
+            <InfiniteCarousel />
         <div className="">
           <LazyLoadComponent>
             <Suspense fallback={<div>Loading...</div>}>
@@ -33,6 +35,8 @@ export default function Home() {
               <Faq />
             </Suspense>
           </LazyLoadComponent>
+          <BigTitle title="Enlaces de interés" subtitle="" />
+          <Links images={imagesSet1} />
           <Contact />
         </div>
       </div>

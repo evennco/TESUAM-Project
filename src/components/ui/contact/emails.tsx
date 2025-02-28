@@ -1,6 +1,4 @@
-"use client";
-
-import React from "react";
+import HashtagBanner from '@/components/ui/common/HashtagBanner';
 
 export default function Emails() {
   return (
@@ -8,10 +6,8 @@ export default function Emails() {
       id="enviar-correo"
       className="bg-foundationcolorwhite dark:bg-foundationcolorwhite"
     >
+      <HashtagBanner text='#TESUAM' />
       <div className="py-8 px-4 max-w-5xl mx-auto">
-        <span className="bg-foundationcolorred1 text-white py-1 px-3 rounded-full text-sm font-semibold">
-          #TESUAM
-        </span>
         <p className="text-sm text-foundationcoloryellow2 mt-2">
           Contáctanos o escríbenos por correo
         </p>
@@ -25,7 +21,7 @@ export default function Emails() {
         <div className="overflow-x-auto">
           <table className="w-full border-collapse overflow-hidden rounded-lg shadow-sm text-left">
             <thead>
-            <tr className="bg-[#D39346] bg-opacity-70 text-foundationcolorblack font-bold">
+              <tr className="bg-[#D39346] bg-opacity-70 text-foundationcolorblack font-bold">
                 <th className="px-4 py-3">Dirección Correo</th>
                 <th className="px-4 py-3">Motivo Contacto</th>
               </tr>

@@ -10,6 +10,7 @@ const ProjectsCards = ({ image, title, text }: ProjectsCardProps) => {
                 src={image}
                 alt="Project Image"
                 fill
+                sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-125 group-hover:brightness-50"
             />
 
@@ -26,9 +27,9 @@ const ProjectsCards = ({ image, title, text }: ProjectsCardProps) => {
                 <p className="font-light text-foundationcolorblack">{text}</p>
             </div>
 
-            <div className="absolute inset-0 flex flex-col justify-between bg-gray-800 bg-opacity-75 opacity-0 transition-opacity duration-300 group-hover:opacity-100 p-6">
-                <h3 className="text-2xl font-semibold text-white">Nuevo Título</h3>
-                <p className="text-white flex-grow">
+            <div className="absolute inset-0 flex flex-col justify-between bg-white bg-opacity-50 opacity-0 transition-opacity duration-300 group-hover:opacity-100 p-6">
+                <h3 className="text-2xl font-semibold text-foundationcolorblack">Nuevo Título</h3>
+                <p className="text-foundationcolorblack flex-grow">
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim dicta recusandae numquam ducimus dolores dolor molestiae voluptas inventore, praesentium, facilis pariatur ut eos sit hic blanditiis? Labore a quos excepturi.
                 </p>
                 <div className="mt-auto">

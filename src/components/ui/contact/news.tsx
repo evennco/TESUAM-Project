@@ -1,14 +1,10 @@
-"use client";
-
-import React from "react";
+import HashtagBanner from '@/components/ui/common/HashtagBanner';
 
 export default function News() {
   return (
     <section id="boletin" className="bg-foundationcolorwhite dark:bg-foundationcolorwhite">
+      <HashtagBanner text="#TESUAM" />
       <div className="py-8 px-4 max-w-5xl mx-auto">
-        <span className="bg-foundationcolorred1 text-white py-1 px-3 rounded-full text-sm font-semibold">
-          #TESUAM
-        </span>
         <p className="text-sm text-foundationcoloryellow2 mt-2">Suscríbete a nuestro</p>
         <h2 className="text-3xl sm:text-4xl font-bold mt-2 mb-4 text-foundationcolorred1">
           Boletín de Novedades
@@ -25,7 +21,6 @@ export default function News() {
           <li>Reflexiones y mensajes de fe para fortalecer tu espíritu.</li>
           <li>Formas prácticas de contribuir a nuestra misión.</li>
         </ul>
-
         <div className="flex flex-wrap items-center gap-4">
           <input
             type="email"

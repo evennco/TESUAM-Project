@@ -6,8 +6,6 @@ import phrases from '@/assets/locales/es.json';
 import DonateButton from '@/components/ui/common/DonateButton';
 import MoreButton from '@/components/ui/common/MoreButton';
 
-const InfiniteCarousel = lazy(() => import('./infinitecarrousel'));
-
 const Carousel: React.FC<CarouselProps> = ({ data }) => {
     const [currentImg, setCurrentImg] = useState(0);
     const carouselRef = useRef<HTMLDivElement>(null);
@@ -46,11 +44,6 @@ const Carousel: React.FC<CarouselProps> = ({ data }) => {
                     <DonateButton text={phrases.buttons[1].donate || 'Haz tu donación'} />
                     </div>
                 </div>
-            </div>
-            <div className='w-full flex justify-center space-x-2'>
-                <Suspense fallback={<div>Loading...</div>}>
-                    <InfiniteCarousel />
-                </Suspense>
             </div>
         </div>
     );

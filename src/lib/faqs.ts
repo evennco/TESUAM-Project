@@ -31,3 +31,17 @@ export const volunteer = [
         answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tristique suscipit met"
     }
 ];
+export const supportvolunteer = [
+    {
+        question: "Como puedo ser voluntario?",
+        answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tristique suscipit met"
+    },
+    {
+        question: "Que actividades realizan los voluntarios?",
+        answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tristique suscipit met"
+    },
+    {
+        question: "Cuales son los requisitos para ser voluntario?",
+        answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tristique suscipit met"
+    }
+];

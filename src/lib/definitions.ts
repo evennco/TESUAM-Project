@@ -30,6 +30,11 @@ export interface ProjectsCardProps {
     title: string;
     text: string;
 }
+export interface ProjectsComponentProps {
+  images: 
+  { src: StaticImageData, title: string, text: string }[];
+}
+
 export interface BigTitleProps {
     title: string;
     subtitle: string;
@@ -61,3 +66,9 @@ export interface FAQItem {
     question: string;
     answer: string;
   }
+export interface HashtagBannerProps {
+  text: string;
+}
+export interface LinksProps {
+  images: { src: StaticImageData }[];
+}
