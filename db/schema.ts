@@ -27,7 +27,7 @@ export const donaciones = sqliteTable('donaciones', {
         .notNull()
         .references(() => donantes.id),
     descripcion: text('descripcion', { length: 255 }).notNull(),
-    fechaDonacion: text('fecha_donacion').notNull(), //SQlite no tiene DATE, manejar en Formato (DD-MM-YYYY).
+    fechaDonacion: text('fecha_donacion').notNull(), //SQlite no tiene DATE, manejar en Formato (YYYY-MM-DD).
     valorAproximado: real('valor_aproximado'), 
     recibida: integer('recibida').notNull().default(0),
     categoriaId: integer('categoria_id')

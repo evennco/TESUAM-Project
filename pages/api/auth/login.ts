@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { db, admins } from '@/db';
+import { db} from '@/db';
+import { admins} from '../../../db/schema';
 import { eq } from 'drizzle-orm';
 import bcrypt from 'bcrypt';
 import { serialize } from 'cookie';
@@ -27,7 +28,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
 
     try {
-        // Parsear el body correctamente
+
         const body = typeof req.body === "string" ? JSON.parse(req.body) : req.body;
         const { username, password } = loginSchema.parse(body);
 
