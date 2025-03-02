@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import sql, { config as SqlConfig } from "mssql";
 
-// Renombrar la constante para que no se llame "config"
+// Renombrar la constante para que no se llame "config"q
 export const dbConfig: SqlConfig = {
   user: process.env.DB_USER as string,
   password: process.env.DB_PASS as string,
