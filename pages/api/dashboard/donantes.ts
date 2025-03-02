@@ -1,15 +1,21 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { db, donantes } from '@/db';
+import { dbConfig } from '@/db';
+import sql from 'mssql';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-    if (req.method === 'GET') {
-        try {
-            const result = await db.select().from(donantes).all();
-            return res.status(200).json(result);
-        } catch (error) {
-            console.error('Error fetching donantes:', error);
-            return res.status(500).json({ message: 'Error fetching donantes' });
-        }
+    if (req.method !== 'GET') {
+        return res.status(405).json({ message: 'Method Not Allowed' });
     }
-    return res.status(405).json({ message: 'Method Not Allowed' });
+
+    try {
+        const pool = await sql.connect(dbConfig);
+        const result = await pool.request().query(`
+            SELECT id, nombre, telefono, email, direccion FROM donantes
+        `);
+
+        return res.status(200).json(result.recordset);
+    } catch (error) {
+        console.error('Error fetching donantes:', error);
+        return res.status(500).json({ message: 'Error fetching donantes' });
+    }
 }
