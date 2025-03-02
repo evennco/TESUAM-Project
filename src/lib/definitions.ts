@@ -69,3 +69,6 @@ export interface FAQItem {
 export interface HashtagBannerProps {
   text: string;
 }
+export interface LinksProps {
+  images: { src: StaticImageData }[];
+}
