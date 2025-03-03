@@ -116,6 +116,12 @@ export default function DonantesPage() {
       <div className="flex justify-between items-center mb-6">
         <h1 className="text-2xl font-bold">Gestión de Donantes</h1>
         <button
+            onClick={() => router.push("/admin")}
+            className="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-lg shadow"
+          >
+            Admin
+          </button>
+        <button
           onClick={handleLogout}
           className="bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded-lg shadow"
         >

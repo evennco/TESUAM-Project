@@ -24,10 +24,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
 
     try {
-        const decoded = jwt.verify(token, JWT_SECRET) as { role?: string };
-        if (!decoded || decoded.role !== 'admin') {
-            return res.status(403).json({ message: 'Forbidden' });
-        }
+        const decoded = jwt.verify(token, JWT_SECRET);
+        console.log("✅ Token verificado:", decoded); 
 
         const pool = await sql.connect(dbConfig);
         const result = await pool.request().query(`
@@ -37,6 +35,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         return res.status(200).json(result.recordset);
     } catch (error) {
         console.error('Error fetching admins:', error);
-        return res.status(500).json({ message: 'Error fetching admins' });
+        return res.status(500).json({ message: 'Error en el servidor', error });
     }
 }

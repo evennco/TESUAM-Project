@@ -9,10 +9,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         if (req.method === 'GET') {
             const result = await pool.request().query(`
                 SELECT id, donante_id, descripcion, 
-                       CONVERT(VARCHAR, fecha_donacion, 23) AS fecha_donacion, 
-                       valor_aproximado, recibida, categoria_id 
+                    CONVERT(VARCHAR, fecha_donacion, 23) AS fecha_donacion, 
+                    '$' + FORMAT(CAST(valor_aproximado AS INT), 'N0', 'es-CO') AS valor_aproximado, 
+                    recibida, categoria_id 
                 FROM donaciones
-            `);
+            `);            
             return res.status(200).json(result.recordset);
         }
 
