@@ -89,6 +89,11 @@ export default function NavBar() {
                   <p className={getLinkClass('/contact')}>Contáctanos</p>
                 </Link>
               </li>
+              <li>
+                <Link href="/qrpage" replace>
+                  <p className={getLinkClass('/qrpage')}>Métodos de pago</p>
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
