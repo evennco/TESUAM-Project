@@ -39,7 +39,7 @@ export default function NavBar() {
             <p className="flex items-center"></p>
           </Link>
           <div className="flex items-center lg:order-2">
-            <a href="#" className="flex items-center text-white bg-foundationcoloryellow1 hover:bg-foundationcolorwhite hover:text-foundationcolorwhite focus:ring-4 focus:ring-gray-300 font-medium rounded-2xl text-sm px-2 lg:px-3 py-1 lg:py-1 mr-2 dark:hover:bg-foundationcolorwhite focus:outline-none">
+            <a href="#" className="flex items-center text-white bg-foundationcoloryellow1 hover:text-foundationcolorwhite focus:ring-4 focus:ring-gray-300 font-medium rounded-2xl text-sm px-2 lg:px-3 py-1 lg:py-1 mr-2 dark:hover:bg-foundationcoloryellow2 focus:outline-none">
               <FaHeart className="w-4 h-4 mr-2" />
               Donar
             </a>
@@ -53,7 +53,7 @@ export default function NavBar() {
             <button
               data-collapse-toggle="mobile-menu-2"
               type="button"
-              className="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+              className="inline-flex items-center p-2 ml-1 text-sm text-foundationcolorwhite rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400"
               aria-controls="mobile-menu-2"
               aria-expanded={isOpen}
               onClick={toggleMenu}
