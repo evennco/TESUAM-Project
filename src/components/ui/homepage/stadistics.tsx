@@ -1,11 +1,22 @@
 "use client"
-import CountUp from 'react-countup';
-import React from 'react';
+import React, { useState } from 'react';
 import StadisticsCard from '../common/stadisticscard';
 import BigTitle from "../common/bigtitle";
 import phrases from '@/assets/locales/es.json';
+import Modal from "@/components/ui/common/supportmodal";
+import { STADISTICS_DATA } from '@/components/ui/common/stadisticsData';
 
 const Stadistics: React.FC = () => {
+    const [selectedCardIndex, setSelectedCardIndex] = useState<number | null>(null);
+
+    const handleOpenModal = (index: number) => {
+        setSelectedCardIndex(index);
+    };
+
+    const handleCloseModal = () => {
+        setSelectedCardIndex(null);
+    };
+
     return (
         <section className="bg-foundationcolorwhite dark:bg-foundationcolorwhite">
             <div className="py-8 px-8 mx-auto sm:py-16 lg:px-20 items-center">
@@ -16,11 +27,20 @@ const Stadistics: React.FC = () => {
                     </div>
                 </div>
                 <div className="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-4 md:gap-12 md:space-y-0">
-                    <StadisticsCard value={110} text="Niñas y adolescentes en condición de vulnerabilidad ayudadas por medio de nuestra fundación." />
-                    <StadisticsCard value={13} text="Alianzas con instituciones nacionales e internacionales para lograr nuestros objetivos." />
-                    <StadisticsCard value={7410} text="Comidas brindadas mensualmente para la seguridad alimentaria de nuestras niñas." />
-                    <StadisticsCard value={2} text="Años de servicio y ayuda en nuestra comunidad del departamento del Guaviare en Colombia." />
+                    {STADISTICS_DATA.map((data, index) => (
+                        <StadisticsCard
+                            key={index}
+                            value={data.value}
+                            text={data.text}
+                            onOpenModal={() => handleOpenModal(index)}
+                        />
+                    ))}
                 </div>
+                {selectedCardIndex !== null && (
+                    <Modal onClose={handleCloseModal}>
+                        {STADISTICS_DATA[selectedCardIndex].modalContent}
+                    </Modal>
+                )}
             </div>
         </section>
     );

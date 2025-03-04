@@ -2,57 +2,59 @@ import { ReactNode } from 'react';
 import { StaticImageData } from 'next/image';
 
 export interface Phrase {
-    text: string;
-  }
-// Interface for Carousel data
-export interface CarouselItem {
-    image: string;
-    title: string;
-    text: string;
+  text: string;
 }
-// Props interface for Carousel component
+
+export interface CarouselItem {
+  image: string;
+  title: string;
+  text: string;
+}
+
 export interface CarouselProps {
-    data: CarouselItem[];
-    children?: ReactNode;
+  data: CarouselItem[];
+  children?: ReactNode;
 }
 
 export interface InfiniteCarouselItem {
-    src: StaticImageData;
+  src: StaticImageData;
 }
 
 export interface StadisticsCardProps {
-    value: number;
-    text: string;
+  value: number;
+  text: string;
 }
 
 export interface ProjectsCardProps {
-    image: StaticImageData;
-    title: string;
-    text: string;
+  image: StaticImageData;
+  title: string;
+  text: string;
 }
+
 export interface ProjectsComponentProps {
-  images: 
-  { src: StaticImageData, title: string, text: string }[];
+  images: { src: StaticImageData; title: string; text: string }[];
 }
 
 export interface BigTitleProps {
-    title: string;
-    subtitle: string;
+  title: string;
+  subtitle: string;
 }
+
 export interface BigMiniTitleProps {
-    title: string;
-    subtitle: string;
+  title: string;
+  subtitle: string;
 }
+
 export interface bibleQuotationProps {
-    title: string;
-    quotation: string;
+  title: string;
+  quotation: string;
 }
 
 export interface VideocardProps {
-    videoUrl:string, 
-    title:string, 
-    description:string, 
-    buttonText:string
+  videoUrl: string;
+  title: string;
+  description: string;
+  buttonText: string;
 }
 
 export interface DonateButtonProps {
@@ -61,14 +63,25 @@ export interface DonateButtonProps {
 
 export interface MoreButtonProps {
   text: string;
+  onClick?: () => void;
+  link ?: string
 }
+
 export interface FAQItem {
-    question: string;
-    answer: string;
-  }
+  question: string;
+  answer: string;
+}
+
 export interface HashtagBannerProps {
   text: string;
 }
+
 export interface LinksProps {
-  images: { src: StaticImageData }[];
+  images: { src: StaticImageData; link?: string }[];
+}
+
+export interface StadisticsData {
+  value: number;
+  text: string;
+  modalContent: ReactNode;
 }

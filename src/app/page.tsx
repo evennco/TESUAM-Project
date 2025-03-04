@@ -29,14 +29,13 @@ export default function Home() {
           </LazyLoadComponent>
           <Projects />
           <Stories />
-          <Volunteer />
           <LazyLoadComponent>
             <Suspense fallback={<div>Loading...</div>}>
               <Faq />
             </Suspense>
           </LazyLoadComponent>
           <BigTitle title="Enlaces de interés" subtitle="" />
-          <Links images={imagesSet1} />
+          <Links images={imagesSet1}/>
           <Contact />
         </div>
       </div>
