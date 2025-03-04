@@ -1,6 +1,6 @@
 import HashtagBanner from "../common/HashtagBanner";
 
-export default function SocialMedia() {
+export default function Mission() {
     return (
       <section
         id="redes-sociales"
@@ -8,7 +8,7 @@ export default function SocialMedia() {
       >
         <HashtagBanner text="Mision" />
         <div className="py-8 px-4 max-w-5xl mx-auto">
-          <p className="text-sm text-foundationcoloryellow1 mt-2">
+          <p className="text-4x1 text-foundationcoloryellow1 mt-2">
             Nuestro proposito y accion socual se refleja con
           </p>
           <h2 className="text-3xl sm:text-4xl font-bold mt-2 mb-4 text-foundationcolorred1">
