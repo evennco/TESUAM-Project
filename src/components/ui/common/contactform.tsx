@@ -3,7 +3,7 @@ import React from 'react';
 
 const ContactForm: React.FC = () => {
     return (
-        <div className="bg-white dark:bg-foundationcolorwhite p-6 rounded-lg">
+        <div className="bg-foundationcolorwhite dark:bg-foundationcolorwhite p-6 rounded-lg">
             <form className="space-y-6 text-left">
                 <div>
                     <label htmlFor="subject" className="block text-sm font-medium text-foundationcolorblack dark:text-foundationcolorblack">Asunto</label>

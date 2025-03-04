@@ -1,4 +1,3 @@
-// cardsData.ts
 export const CARDS_DATA = [
   {
     title: "¿POR QUÉ DONAR?",
@@ -6,22 +5,21 @@ export const CARDS_DATA = [
     modalContent: (
       <>
         <h2 className="text-3xl font-extrabold mb-4 text-foundationcolorred1">Más detalles: ¿Por qué donar?</h2>
-        <p className="text-justify p-4">
-          1. Donaciones en dinero
-          Tu aporte económico garantiza educación, alimentación y un hogar seguro para
-          nuestras niñas.
-          Para donar en línea, haz clic en el botón "Donar" en la esquina superior
-          derecha.
-
-          2. Donaciones en especie
-          Aporta insumos esenciales como:
-          Alimentos no perecederos
-          Ropa y calzado en buen estado
-          Útiles escolares y material didáctico
-          Productos de aseo e higiene personal
-
-          Contáctanos para coordinar la entrega.
-        </p>
+        <ul className="text-justify p-4 list-disc list-inside">
+          <li>- ✨ Impactar una vida es cambiar el futuro.</li>
+          <li>- 💬 Tu donación ayuda a transformar la vida de niñas y comunidades en situación de vulnerabilidad, proporcionándoles educación, alimentación, refugio y oportunidades para un mejor futuro. Creemos en la importancia de brindar esperanza a través del amor y el servicio.</li>
+          <li>- 🔍 En TESUAM, cada aporte es una semilla de esperanza.</li>
+          <li>- Tu donación nos permite:</li>
+          <ul className="pl-4">
+            <li>- ✅ Brindar alimentación y atención integral a niñas en situaciones difíciles.</li>
+            <li>- ✅ Apoyar su educación y formación, para que construyan un futuro con oportunidades.</li>
+            <li>- ✅ Sostener nuestros programas de desarrollo, ayuda humanitaria y fortalecimiento comunitario.</li>
+            <li>- ✅ Cumplir nuestra misión de ser luz y esperanza, reflejando el amor de Dios en acción.</li>
+          </ul>
+          <li>- Dios nos llama a cuidar de los más necesitados:</li>
+          <li>- 📖 "En verdad les digo que en cuanto lo hicieron a uno de estos hermanos míos más pequeños, a mí me lo hicieron." — Mateo 25:40</li>
+          <li>- Cada donación es un acto de fe que transforma vidas. ¿Te unes a esta misión?</li>
+        </ul>
       </>
     ),
   },
@@ -31,20 +29,39 @@ export const CARDS_DATA = [
     modalContent: (
       <>
         <h2 className="text-3xl mb-4 font-extrabold text-foundationcolorred1">Formas de donar</h2>
-        <p className="text-justify p-4">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis quia, amet doloremque voluptatem quisquam praesentium nesciunt, distinctio nisi ut accusantium assumenda reiciendis aut voluptatum eius fugiat omnis ab, obcaecati in? Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni voluptatem vel, libero optio aliquam in fugit deserunt nobis cumque voluptatum neque quis explicabo sequi autem pariatur eos. Rem, similique facere. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae error, unde ut fugit accusantium dolorum soluta voluptatum praesentium amet a modi, facere reiciendis! Quia tenetur, explicabo illum iste nemo est. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non laudantium voluptatibus voluptatum assumenda voluptas nulla recusandae dolor rem ducimus, et eos. Voluptatibus minus eligendi officia. Saepe harum facere dolor fuga? Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim sequi velit nisi blanditiis praesentium voluptatibus beatae odit itaque, quisquam fugit nam explicabo! Nihil qui quisquam doloribus illum voluptatem repellendus mollitia. Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus non sit ipsum dolore ratione enim saepe atque maiores voluptas molestiae nesciunt officiis quas quos ipsam eos dicta numquam, magni accusantium. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae omnis debitis deserunt, illo ipsam eum nulla officiis et distinctio autem dolor unde quisquam animi ipsa itaque magni accusantium perspiciatis nemo!
-        </p>
+        <ul className="text-justify p-4">
+          <li>1. Donaciones en dinero
+            Tu aporte económico garantiza educación, alimentación y un hogar seguro para
+            nuestras niñas.
+            Para donar en línea, haz clic en el botón "Donar" en la esquina superior
+            derecha.</li>
+          <li>2. Donaciones en especie
+            Aporta insumos esenciales como:
+            Alimentos no perecederos
+            Ropa y calzado en buen estado
+            Útiles escolares y material didáctico
+            Productos de aseo e higiene personal</li>
+        </ul>
       </>
     ),
   },
   {
     title: "BENEFICIOS DE DONAR",
-    description: "Conoce algunos beneficios que obtienes al convertirte en donante aliado.",
+    description: "Tu donación no es solo dinero, es esperanza, fe y transformación para niñas en extrema vulnerabilidad.",
     modalContent: (
       <>
         <h2 className="text-3xl font-extrabold mb-4 text-foundationcolorred1">Beneficios de donar</h2>
         <ul className="list-disc list-inside p-4">
-          <li>Deducciones de impuestos</li>
+          <h3 className="text-2xl font-bold mt-4">Impacto real y tangible:</h3>
+          <li>- Transformas vidas: Brindas educación, alimentación y un hogar seguro a niñas rescatadas de la violencia.</li>
+          <li>- Rompes ciclos de pobreza: Cada aporte ayuda a que las niñas construyan un futuro digno y autónomo.</li>
+          <li>- Apoyas proyectos autosostenibles: Contribuyes al crecimiento de huertas, panadería y otras iniciativas que garantizan la sostenibilidad de TESUAM.</li>
+          <h3 className="text-2xl font-bold mt-4">Beneficios para ti:</h3>
+          <li>- Recibe un certificado de donación como reconocimiento oficial por tu aporte solidario.</li>
+          <li>- Transparencia y confianza: Recibes reportes sobre el impacto de tu donación y cómo se utiliza.</li>
+          <li>- Conexión con la causa: Eres parte de una comunidad comprometida con la protección infantil y el cambio social.</li>
+          <li>- Vives el amor en acción: Tu generosidad refleja el llamado a ayudar al prójimo y proteger a los más vulnerables.</li>
+          <li>- Siembras bendiciones: "Dios ama al dador alegre" (2 Corintios 9:7). Tu apoyo es una obra de fe que traerá frutos en tu vida.</li>
         </ul>
       </>
     ),

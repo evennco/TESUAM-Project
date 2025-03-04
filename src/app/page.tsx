@@ -15,7 +15,7 @@ import Links from '@/components/ui/common/LinksComponent';
 export default function Home() {
   return (
     <main className="flex flex-col text-center justify-center items-center">
-      <div className="w-full flex-grow bg-white dark:bg-foundationcolorwhite">
+      <div className="w-full flex-grow dark:bg-foundationcolorwhite bg-foundationcolorwhite">
         <Suspense fallback={<div>Loading...</div>}>
           <Carousel data={carrouseldata}>
           </Carousel>
@@ -29,14 +29,13 @@ export default function Home() {
           </LazyLoadComponent>
           <Projects />
           <Stories />
-          <Volunteer />
           <LazyLoadComponent>
             <Suspense fallback={<div>Loading...</div>}>
               <Faq />
             </Suspense>
           </LazyLoadComponent>
           <BigTitle title="Enlaces de interés" subtitle="" />
-          <Links images={imagesSet1} />
+          <Links images={imagesSet1}/>
           <Contact />
         </div>
       </div>

@@ -3,7 +3,7 @@ import { BigTitleProps } from '@/lib/definitions';
 
 const BigTitle = ({ title, subtitle }: BigTitleProps) => {
     return (
-        <div className='bg-white dark:bg-foundationcolorwhite'>
+        <div className='dark:bg-foundationcolorwhite bg-foundationcolorwhite'>
             <div className="mx-auto max-w-screen-md text-start mb-8 lg:mb-12">
                 <p className="font-urbanist text-center mb-4 text-3xl sm:text-4xl md:text-5xl tracking-tight font-semibold text-foundationcoloryellow1 dark:text-foundationcoloryellow1">
                     {title}

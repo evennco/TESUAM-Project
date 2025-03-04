@@ -11,8 +11,8 @@ import parque_infantil from '/public/main/parque infantil.jpg';
 import conuco_amazonico from '/public/main/conuco amazonico.jpg';
 import salon from '/public/main/salon.jpg';
 export const imagesSet1 = [
-    { src: casa_misioneros_asas, title: "titulo 1", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tristique suscipit metus, sed sagittis sem pellentesque ut. Sed sit amet nulla euismod odio finibus pharetra volutpat nec tellus." },
-    { src: musico, title: "titulo 2", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tristique suscipit metus, sed sagittis sem pellentesque ut. Sed sit amet nulla euismod odio finibus pharetra volutpat nec tellus." },
-    { src: camilla, title: "titulo 3", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tristique suscipit metus, sed sagittis sem pellentesque ut. Sed sit amet nulla euismod odio finibus pharetra volutpat nec tellus." },
-    { src: comedor1, title: "titulo 4", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tristique suscipit metus, sed sagittis sem pellentesque ut. Sed sit amet nulla euismod odio finibus pharetra volutpat nec tellus." }
+    { src: casa_misioneros_asas, link: "https://childimpact.org" },
+    { src: musico, link: "/support" },
+    { src: camilla, link: "https://www.facebook.com/photo/?fbid=1047572897416988&set=a.647222930785322" },
+    { src: comedor1, link: "https://www.facebook.com/maranduastereo/videos/616899864072174" }
   ];
