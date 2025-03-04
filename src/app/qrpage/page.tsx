@@ -1,48 +1,36 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import MoreButton from '@/components/ui/common/MoreButton';
-import carrousel1 from "/public/carrousel1.png";
+import bancolombia from "/public/main/logos/LogoBancolombia.png";
 import wompi from "/public/main/logos/wompi-logo.png";
 
 const Qrpage: React.FC = () => {
   return (
     <main className="flex flex-col text-center justify-center items-center">
       <div className="w-full flex-grow bg-white dark:bg-foundationcolorwhite py-8 px-4 sm:px-8 lg:px-20">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           <div className="flex flex-col items-center">
             <Image
-              src={carrousel1}
+              src={bancolombia}
               alt="Image 1"
-              width={600}
-              height={500}
-              className="rounded-lg w-full h-full"
+              width={400}
+              height={400}
+              className="rounded-lg w-1/2 h-full"
             />
             <p className="mt-10 mb-10 text-lg text-foundationcolorblack dark:text-foundationcolorblack">
-              Número de cuenta: 1234567890
-            </p>
-          </div>
-          <div className="flex flex-col items-center">
-            <Image
-              src={carrousel1}
-              alt="Image 2"
-              width={600}
-              height={500}
-              className="rounded-lg w-full h-full"
-            />
-            <p className="mt-10 mb-10 text-lg text-foundationcolorblack dark:text-foundationcolorblack">
-              Número de cuenta: 0987654321
+              Cuenta Bancolombia: Ahorros - <strong>828-000029-04</strong>
             </p>
           </div>
           <div className="flex flex-col items-center justify-center">
             <Image
               src={wompi}
               alt="Image 2"
-              width={500}
+              width={400}
               height={400}
-              className="rounded-lg w-full h-full"
+              className="rounded-3xl w-1/2 h-full"
             />
             <div className="bg-foundationcolorwhite dark:bg-foundationcolorwhite p-6 rounded-lg">
-              <Link href="https://www.wompi.co/">
+              <Link href="https://checkout.wompi.co/l/RXNJFs ">
                 <MoreButton text="Ir a Wompi" />
               </Link>
             </div>
