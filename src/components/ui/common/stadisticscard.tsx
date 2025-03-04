@@ -6,7 +6,7 @@ import MoreButton from '@/components/ui/common/MoreButton';
 interface StadisticsCardProps {
     value: number;
     text: string;
-    onOpenModal: () => void;
+    onOpenModal ?: () => void;
 }
 
 const StadisticsCard: React.FC<StadisticsCardProps> = ({ value, text, onOpenModal }) => {
