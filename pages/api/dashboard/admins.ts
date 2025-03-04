@@ -25,7 +25,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     try {
         const decoded = jwt.verify(token, JWT_SECRET);
-        console.log("✅ Token verificado:", decoded); 
+        console.log("Token verificado:", decoded); 
 
         const pool = await sql.connect(dbConfig);
         const result = await pool.request().query(`

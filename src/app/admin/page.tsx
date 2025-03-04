@@ -43,7 +43,7 @@ export default function DonacionesPage() {
         fetchDonaciones();
       } else {
         setIsAuthenticated(false);
-        router.push("/admin");
+        router.push("/login");
       }
     } catch (error) {
       console.error("Error checking authentication:", error);
