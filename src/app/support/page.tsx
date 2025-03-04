@@ -9,6 +9,9 @@ import SupportVolunteer from '@/components/ui/support/SupportVolunteer';
 import SupportVideos from '@/components/ui/support/SupportVideos';
 import Faq from '@/components/ui/homepage/faq';
 import SupportForm from '@/components/ui/support/SupportForm';
+import {imagesSet1} from '@/lib/cardslinksimages';
+import Links from '@/components/ui/common/LinksComponent';
+import BigTitle from '@/components/ui/common/bigtitle';
 
 
 const Support: React.FC = () => {
@@ -24,6 +27,8 @@ const Support: React.FC = () => {
             <SupportVolunteer />
             <SupportVideos />
             <Faq />
+            <BigTitle title="Enlaces de interés" subtitle="" />
+            <Links images={imagesSet1} />
             <SupportForm />
         </div>
       </main>

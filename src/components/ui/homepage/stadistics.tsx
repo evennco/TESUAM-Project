@@ -16,9 +16,9 @@ const Stadistics: React.FC = () => {
                     </div>
                 </div>
                 <div className="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-4 md:gap-12 md:space-y-0">
-                    <StadisticsCard value={148} text="Niñas y adolescentes en condición de vulnerabilidad ayudadas por medio de nuestra fundación." />
-                    <StadisticsCard value={23} text="Alianzas con instituciones nacionales e internacionales para lograr nuestros objetivos." />
-                    <StadisticsCard value={13320} text="Comidas brindadas mensualmente para la seguridad alimentaria de nuestras niñas." />
+                    <StadisticsCard value={110} text="Niñas y adolescentes en condición de vulnerabilidad ayudadas por medio de nuestra fundación." />
+                    <StadisticsCard value={13} text="Alianzas con instituciones nacionales e internacionales para lograr nuestros objetivos." />
+                    <StadisticsCard value={7410} text="Comidas brindadas mensualmente para la seguridad alimentaria de nuestras niñas." />
                     <StadisticsCard value={2} text="Años de servicio y ayuda en nuestra comunidad del departamento del Guaviare en Colombia." />
                 </div>
             </div>

@@ -10,6 +10,8 @@ import { carrouseldata } from '@/lib/utils';
 import { Suspense } from 'react';
 import LazyLoadComponent from '@/components/ui/common/LazyLoadComponent';
 import BigTitle from '@/components/ui/common/bigtitle';
+import { imagesSet1 } from '@/lib/cardslinksimages';
+import Links from '@/components/ui/common/LinksComponent';
 export default function Home() {
   return (
     <main className="flex flex-col text-center justify-center items-center">
@@ -26,7 +28,6 @@ export default function Home() {
             </Suspense>
           </LazyLoadComponent>
           <Projects />
-          
           <Stories />
           <Volunteer />
           <LazyLoadComponent>
@@ -34,6 +35,8 @@ export default function Home() {
               <Faq />
             </Suspense>
           </LazyLoadComponent>
+          <BigTitle title="Enlaces de interés" subtitle="" />
+          <Links images={imagesSet1} />
           <Contact />
         </div>
       </div>

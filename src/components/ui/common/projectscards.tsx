@@ -32,9 +32,6 @@ const ProjectsCards = ({ image, title, text }: ProjectsCardProps) => {
                 <p className="text-foundationcolorblack flex-grow">
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim dicta recusandae numquam ducimus dolores dolor molestiae voluptas inventore, praesentium, facilis pariatur ut eos sit hic blanditiis? Labore a quos excepturi.
                 </p>
-                <div className="mt-auto">
-                    <MoreButton text="Conoce más" />
-                </div>
             </div>
         </div>
     );
