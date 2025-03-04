@@ -6,10 +6,10 @@ import wompi from "/public/main/logos/wompi-logo.png";
 
 const Qrpage: React.FC = () => {
   return (
-    <main className="flex flex-col text-center justify-center items-center">
-      <div className="w-full flex-grow bg-white dark:bg-foundationcolorwhite py-8 px-4 sm:px-8 lg:px-20">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          <div className="flex flex-col items-center">
+    <main className="flex flex-col text-center justify-center items-center bg-foundationcolorwhite">
+      <div className="w-full flex-grow dark:bg-foundationcolorwhite bg-foundationcolorwhite py-8 px-4 sm:px-8 lg:px-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 bg-foundationcolorwhite">
+          <div className="flex flex-col items-center ">
             <Image
               src={bancolombia}
               alt="Image 1"

@@ -19,12 +19,12 @@ export default function NavBar() {
   const getLinkClass = (path: string) => {
     return currentPath === path
       ? 'block py-2 pr-4 pl-3 text-foundationcolorred2 rounded lg:bg-transparent lg:text-foundationcoloryellow2 lg:p-0 dark:text-foundationcoloryellow2'
-      : 'block py-2 pr-4 pl-3 text-gray-700 border-white-100 hover:bg-white-300 lg:hover:bg-transparent lg:border-0 lg:hover:text-foundationcoloryellow2 lg:p-0 dark:text-white lg:dark:hover:text-foundationcoloryellow2 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700';
+      : 'block py-2 pr-4 pl-3 text-foundationcolorwhite border-white-100 hover:bg-white-300 lg:hover:bg-transparent lg:border-0 lg:hover:text-foundationcoloryellow2 lg:p-0 dark:text-white lg:dark:hover:text-foundationcoloryellow2 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700';
   };
 
   return (
     <>
-      <div className="w-full bg-foundationcolorred2 py-2">
+      <div className="w-full bg-foundationcolorred2 py-2 dark:bg-foundationcolorred2">
         <Frases />
       </div>
       <nav className="bg-foundationcolorred1 border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-foundationcolorred1">
@@ -39,21 +39,21 @@ export default function NavBar() {
             <p className="flex items-center"></p>
           </Link>
           <div className="flex items-center lg:order-2">
-            <Link href="/qrpage" className="flex items-center text-white bg-foundationcoloryellow1 hover:text-foundationcolorwhite focus:ring-4 focus:ring-gray-300 font-medium rounded-2xl text-sm px-2 lg:px-3 py-1 lg:py-1 mr-2 dark:hover:bg-foundationcoloryellow2 focus:outline-none">
+            <Link href="/qrpage" className="flex items-center text-white bg-foundationcoloryellow1 hover:text-foundationcolorwhite focus:ring-4 focus:ring-gray-300 font-medium rounded-2xl text-sm px-2 lg:px-3 py-1 lg:py-1 mr-2 dark:hover:bg-foundationcoloryellow2 dark:text-white focus:outline-none">
               <FaHeart className="w-4 h-4 mr-2" />
               Donar
             </Link>
             {isAuthenticated && (
               <Link href="/admin">
-                <a className="flex items-center text-white bg-foundationcoloryellow1 hover:bg-foundationcoloryellow2 hover:text-foundationcoloryellow2 focus:ring-4 focus:ring-gray-300 font-medium rounded-2xl text-sm px-2 lg:px-3 py-1 lg:py-1 mr-2 dark:hover:bg-foundationcoloryellow2 focus:outline-none">
+                <p className="flex items-center text-white bg-foundationcoloryellow1 hover:bg-foundationcoloryellow2 hover:text-foundationcoloryellow2 focus:ring-4 focus:ring-gray-300 font-medium rounded-2xl text-sm px-2 lg:px-3 py-1 lg:py-1 mr-2 dark:hover:bg-foundationcoloryellow2 dark:text-white focus:outline-none">
                   Admin Panel
-                </a>
+                </p>
               </Link>
             )}
             <button
               data-collapse-toggle="mobile-menu-2"
               type="button"
-              className="inline-flex items-center p-2 ml-1 text-sm text-foundationcolorwhite rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400"
+              className="inline-flex items-center p-2 ml-1 text-sm text-foundationcolorwhite rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-foundationcolorwhite dark:hover:bg-gray-700"
               aria-controls="mobile-menu-2"
               aria-expanded={isOpen}
               onClick={toggleMenu}

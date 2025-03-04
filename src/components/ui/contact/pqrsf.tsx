@@ -3,7 +3,7 @@ import ContactForm from "@/components/ui/common/contactform";
 
 export default function Pqrsf() {
   return (
-    <section id="pqrsf" className="bg-white dark:bg-foundationcolorwhite">
+    <section id="pqrsf" className="bg-foundationcolorwhite dark:bg-foundationcolorwhite">
       <HashtagBanner text="#TESUAM" />
       <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16">
         <div className="grid lg:grid-cols-2 gap-8">

@@ -6,7 +6,6 @@ export default function WhoAreWe() {
       id="redes-sociales"
       className="bg-foundationcolorwhite dark:bg-foundationcolorwhite"
     >
-      <HashtagBanner text="Tejiendo Sueños" />
       <div className="py-8 px-4 max-w-5xl mx-auto">
         <p className="text-sm text-foundationcoloryellow1 mt-2">
           ¿Quienes somos?

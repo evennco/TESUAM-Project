@@ -17,7 +17,7 @@ import BigTitle from '@/components/ui/common/bigtitle';
 const Support: React.FC = () => {
     return (
         <main className="flex flex-col">
-        <div className="w-full flex-grow bg-white dark:bg-foundationcolorwhite">
+        <div className="w-full flex-grow bg-foundationcolorwhite dark:bg-foundationcolorwhite">
             <SupportBanner />
             <SupportDonation />
             <SupportButtons />

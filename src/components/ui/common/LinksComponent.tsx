@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 const Links: React.FC<LinksProps> = ({ images }) => {
   return (
-    <section className="bg-white dark:bg-foundationcolorwhite">
+    <section className="dark:bg-foundationcolorwhite bg-foundationcolorwhite">
       <div className="pb-8 px-4 mx-auto max-w-screen-xl lg:pb-16">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {images.map((image, index) => (

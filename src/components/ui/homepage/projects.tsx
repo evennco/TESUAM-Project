@@ -6,7 +6,7 @@ import BigMiniTitle from "../common/bigminititle";
 import phrases from '@/assets/locales/es.json';
 const Projects: React.FC = () => {
     return (
-        <section className="bg-white dark:bg-foundationcolorwhite">
+        <section className="dark:bg-foundationcolorwhite bg-foundationcolorwhite">
             <div className="pb-8 px-4 mx-auto max-w-screen-xl lg:pb-16">
                 <BigMiniTitle title = {phrases.titles[1].projectsyellow || "Default Title"} subtitle={phrases.titles[1].projectsred || "Default Subtitle"} />
                 <div className="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10 lg:space-y-0">

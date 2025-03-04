@@ -15,7 +15,7 @@ import Links from '@/components/ui/common/LinksComponent';
 export default function Home() {
   return (
     <main className="flex flex-col text-center justify-center items-center">
-      <div className="w-full flex-grow bg-white dark:bg-foundationcolorwhite">
+      <div className="w-full flex-grow dark:bg-foundationcolorwhite bg-foundationcolorwhite">
         <Suspense fallback={<div>Loading...</div>}>
           <Carousel data={carrouseldata}>
           </Carousel>

@@ -3,7 +3,7 @@ import { VideocardProps } from "../../../lib/definitions";
 
 const VideoCard = ({ videoUrl, title, description, buttonText }:VideocardProps) => {
   return (
-    <div className="bg-white dark:bg-foundationcolorwhite p-4 rounded-lg shadow-md">
+    <div className="bg-foundationcolorwhite dark:foundationcolorwhite p-4 rounded-lg shadow-md rounded-4xl">
       <div className="aspect-w-16 aspect-h-9">
         <iframe
           className="w-full h-full min-h-[400px] object-cover rounded-lg"
