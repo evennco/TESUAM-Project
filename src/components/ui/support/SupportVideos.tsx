@@ -11,14 +11,14 @@ const SupportVideos: React.FC = () => {
         <div className="space-y-8 lg:grid lg:grid-cols-2 sm:gap-6 xl:gap-10 lg:space-y-0">
           <VideoCard
             videoUrl="https://www.youtube.com/embed/dQw4w9WgXcQ"
-            title="Titulo 1"
-            description="Descripcion 1"
+            title="Voluntariado presencial"
+            description="Sé parte del cambio viviendo la experiencia TESUAM en la Amazonía colombiana."
             buttonText="Conoce más"
           />
           <VideoCard
             videoUrl="https://www.youtube.com/embed/dQw4w9WgXcQ"
-            title="Titulo 2"
-            description="Descripcion 2"
+            title="Voluntariado virtual"
+            description="Ayuda desde cualquier parte del mundo con tu talento y conocimientos."
             buttonText="Conoce más"
           />
         </div>
