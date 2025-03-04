@@ -39,10 +39,10 @@ export default function NavBar() {
             <p className="flex items-center"></p>
           </Link>
           <div className="flex items-center lg:order-2">
-            <a href="#" className="flex items-center text-white bg-foundationcoloryellow1 hover:text-foundationcolorwhite focus:ring-4 focus:ring-gray-300 font-medium rounded-2xl text-sm px-2 lg:px-3 py-1 lg:py-1 mr-2 dark:hover:bg-foundationcoloryellow2 focus:outline-none">
+            <Link href="/qrpage" className="flex items-center text-white bg-foundationcoloryellow1 hover:text-foundationcolorwhite focus:ring-4 focus:ring-gray-300 font-medium rounded-2xl text-sm px-2 lg:px-3 py-1 lg:py-1 mr-2 dark:hover:bg-foundationcoloryellow2 focus:outline-none">
               <FaHeart className="w-4 h-4 mr-2" />
               Donar
-            </a>
+            </Link>
             {isAuthenticated && (
               <Link href="/admin">
                 <a className="flex items-center text-white bg-foundationcoloryellow1 hover:bg-foundationcoloryellow2 hover:text-foundationcoloryellow2 focus:ring-4 focus:ring-gray-300 font-medium rounded-2xl text-sm px-2 lg:px-3 py-1 lg:py-1 mr-2 dark:hover:bg-foundationcoloryellow2 focus:outline-none">
