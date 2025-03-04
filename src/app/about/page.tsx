@@ -1,9 +1,22 @@
+import SupportForm from '@/components/ui/support/SupportForm';
+import Faq from '@/components/ui/homepage/faq';
+import Mision from '@/components/ui/about/mision';
+import Quienes from '@/components/ui/about/quienessomos';
+import SupportVideos from '@/components/ui/support/SupportVideos';
+
 export default function About() {
   return (
     <main className="flex flex-col text-center justify-center items-center">
       <div className="w-full flex-grow">
-        <h1 className="text-4xl font-bold">About Us</h1>
-        <p className="mt-4 text-lg">This is the about page of our website.</p>
+        <Quienes />
+        {/* datos random*/}
+        <Mision />
+        <SupportVideos />
+        {/* Equipo de trabajo en planta */}
+        {/* Equipo de trabajo ambulatorio */}
+        <Faq />
+        {/* Enlaces de interes */}
+        <SupportForm />
       </div>
     </main>
   );
