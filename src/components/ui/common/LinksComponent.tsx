@@ -14,8 +14,7 @@ const Links: React.FC<LinksProps> = ({ images }) => {
                 <Image
                   src={image.src}
                   alt={`Image ${index}`}
-                  layout="fill"
-                  objectFit="cover"
+                  fill
                   className="rounded-lg"
                 />
               </div>

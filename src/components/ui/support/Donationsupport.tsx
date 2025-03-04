@@ -17,9 +17,9 @@ const DonationsSection: React.FC = () => {
   };
 
   return (
-    <section className="py-8 flex flex-col items-center">
+    <section className="py-8 px-4 flex flex-col items-center bg-foundationcolorwhite dark:bg-foundationcolorwhite">
       <BibleQuotations title='"Cada uno debe dar según lo que haya decidido en su corazón, no de mala gana ni por obligación, porque Dios ama al que da con alegría"' quotation="- 2 Corintios 9:7" />
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 bg-foundationcolorwhite dark:bg-foundationcolorwhite">
         {CARDS_DATA.map((card, index) => (
           <Card
             key={index}
