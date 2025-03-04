@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import MoreButton from '@/components/ui/common/MoreButton';
 import { LinksProps } from '@/lib/definitions';
+import Link from 'next/link';
 
 const Links: React.FC<LinksProps> = ({ images }) => {
   return (
@@ -19,7 +20,7 @@ const Links: React.FC<LinksProps> = ({ images }) => {
                 />
               </div>
               <div className="mt-4 w-full">
-                <MoreButton text="Conoce más" />
+                {image.link && <Link href={image.link}><MoreButton text="Conoce más" /></Link>}
               </div>
             </div>
           ))}

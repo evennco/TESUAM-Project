@@ -25,6 +25,7 @@ const Support: React.FC = () => {
             <SupportDonateMoney />
             <HashtagBanner text="#TejiendoCambios" />
             <SupportVolunteer />
+            <BigTitle title="Sé parte del cambio viviendo la experiencia" subtitle="TESUAM en la Amazonía colombiana." />
             <SupportVideos />
             <Faq />
             <BigTitle title="Enlaces de interés" subtitle="" />
