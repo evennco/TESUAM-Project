@@ -85,3 +85,9 @@ export interface StadisticsData {
   text: string;
   modalContent: ReactNode;
 }
+
+export interface StadisticsCardProps {
+  value: number;
+  text: string;
+  onOpenModal ?: () => void;
+}

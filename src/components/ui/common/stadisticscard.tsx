@@ -2,12 +2,7 @@
 import CountUp from 'react-countup';
 import phrases from '@/assets/locales/es.json';
 import MoreButton from '@/components/ui/common/MoreButton';
-
-interface StadisticsCardProps {
-    value: number;
-    text: string;
-    onOpenModal ?: () => void;
-}
+import { StadisticsCardProps } from '@/lib/definitions';
 
 const StadisticsCard: React.FC<StadisticsCardProps> = ({ value, text, onOpenModal }) => {
     return (
