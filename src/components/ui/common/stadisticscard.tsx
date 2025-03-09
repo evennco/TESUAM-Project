@@ -1,10 +1,15 @@
 "use client"
 import CountUp from 'react-countup';
-import { StadisticsCardProps } from '@/lib/definitions';
 import phrases from '@/assets/locales/es.json';
 import MoreButton from '@/components/ui/common/MoreButton';
 
-const StadisticsCard = ({ value, text }: StadisticsCardProps) => {
+interface StadisticsCardProps {
+    value: number;
+    text: string;
+    onOpenModal ?: () => void;
+}
+
+const StadisticsCard: React.FC<StadisticsCardProps> = ({ value, text, onOpenModal }) => {
     return (
         <div className="py-10 px-9 hover:border-2 hover:bg-[#D3934633] hover:border-foundationcoloryellow1 rounded-lg transition duration-300 min-h-[200px] flex flex-col justify-between">
             <div>
@@ -13,8 +18,9 @@ const StadisticsCard = ({ value, text }: StadisticsCardProps) => {
                 </div>
                 <p className="text-foundationcolorblack dark:text-foundationcolorblack mb-4">{text}</p>
             </div>
-            <MoreButton text={phrases.buttons[0].more || 'Conoce más'} />
+            <MoreButton text={phrases.buttons[0].more || 'Conoce más'} onClick={onOpenModal} />
         </div>
     );
 }
+
 export default StadisticsCard;

@@ -11,7 +11,7 @@ import { imagesSet1, imagesSet2, imagesSet3, imagesSet4 } from '@/lib/cardsproje
 export default function Projectspage() {
   return (
     <main className="flex flex-col">
-      <div className="w-full flex-grow bg-white dark:bg-foundationcolorwhite">
+      <div className="w-full flex-grow dark:bg-foundationcolorwhite bg-foundationcolorwhite">
         <Projectsbanner />
         <StadisticsProjects />
         <HashtagBanner text="#TejiendoCambios" />
