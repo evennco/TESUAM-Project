@@ -1,6 +1,6 @@
 "use client"
 import Image from 'next/image';
-import React, { useEffect, useRef, useState, Suspense, lazy } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { CarouselProps } from '@/lib/definitions';
 import phrases from '@/assets/locales/es.json';
 import DonateButton from '@/components/ui/common/DonateButton';
@@ -40,8 +40,8 @@ const Carousel: React.FC<CarouselProps> = ({ data }) => {
                     <h1 className='text-white text-start text-lg sm:text-2xl md:text-2xl lg:text-3xl xl:text-4xl font-bold'>{data[currentImg].title}</h1>
                     <p className='text-white text-start text-base sm:text-lg md:text-xl xl:text-2xl'>{data[currentImg].text}</p>
                     <div className='flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-4 mt-4 sm:w-full lg:w-full'>
-                    <MoreButton text={phrases.buttons[0].more || 'Conoce más'} />
-                    <DonateButton text={phrases.buttons[1].donate || 'Haz tu donación'} />
+                        <MoreButton text={phrases.homepage.carrousel.buttons[0].more || 'Conoce más'} />
+                        <DonateButton text={phrases.homepage.carrousel.buttons[1].donate || 'Haz tu donación'} />
                     </div>
                 </div>
             </div>

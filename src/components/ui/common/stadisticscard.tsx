@@ -13,7 +13,7 @@ const StadisticsCard: React.FC<StadisticsCardProps> = ({ value, text, onOpenModa
                 </div>
                 <p className="text-foundationcolorblack dark:text-foundationcolorblack mb-4">{text}</p>
             </div>
-            <MoreButton text={phrases.buttons[0].more || 'Conoce más'} onClick={onOpenModal} />
+            <MoreButton text={phrases.homepage.carrousel.buttons[0].more || 'Conoce más'} onClick={onOpenModal} />
         </div>
     );
 }

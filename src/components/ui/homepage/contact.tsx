@@ -9,12 +9,12 @@ const Contact = () => {
     return (
         <section className="dark:bg-foundationcolorwhite bg-foundationcolorwhite">
             <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 dark:bg-foundationcolorwhite bg-foundationcolorwhite">
-                <BigTitle title={phrases.titles[3].volunteeryellow || "Default Title"} subtitle={phrases.titles[3].volunteerred || "Default Subtitle"} />
-            <div className="space-y-8 lg:grid lg:grid-cols-2 sm:gap-6 xl:gap-10 lg:space-y-0">
-                <ContactForm />
-                <Image src={carrousel1} alt="Contact Image" className="sm:w-fit w-full h-fit rounded-lg" />
+                <BigTitle title={phrases.homepage.contact.title || "Default Title"} subtitle={phrases.homepage.contact.subtitle || "Default Subtitle"} />
+                <div className="space-y-8 lg:grid lg:grid-cols-2 sm:gap-6 xl:gap-10 lg:space-y-0">
+                    <ContactForm />
+                    <Image src={carrousel1} alt="Contact Image" className="sm:w-fit w-full h-fit rounded-lg" />
+                </div>
             </div>
-        </div>
         </section>
     );
 };

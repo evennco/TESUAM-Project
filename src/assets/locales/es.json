@@ -1,63 +1,192 @@
 {
-  "phrasesbanner": [
-    {
-      "text": "Conoce nuestras historias de impacto y esperanza."
+  "homepage": {
+    "carrousel": {
+      "phrasesbanner": [
+        {
+          "text": "Conoce nuestras historias de impacto y esperanza."
+        },
+        {
+          "text": "Juntos transformamos vidas en la Amazonía Colombiana."
+        },
+        {
+          "text": "Más de 120 niñas protegidas y empoderadas gracias a tu apoyo"
+        },
+        {
+          "text": "Sé parte del cambio. Dona hoy y haz la diferencia"
+        },
+        {
+          "text": "Haz un aporte en menos de 3 minutos desde tu celular o computador."
+        }
+      ],
+      "titles": [
+        {
+          "title": "Conoce nuestras historias de impacto y esperanza.",
+          "description": "Descubre cómo juntos transformamos vidas en la Amazonía Colombiana."
+        },
+        {
+          "title": "Más de 120 niñas protegidas y empoderadas gracias a tu apoyo",
+          "description": "Sé parte del cambio. Dona hoy y haz la diferencia"
+        },
+        {
+          "title": "Haz un aporte en menos de 3 minutos desde tu celular o computador.",
+          "description": "Con tu donación, apoyas a más de 120 niñas en la Amazonía Colombiana."
+        }
+      ],
+      "buttons": [
+        {
+          "more": "Conoce más"
+        },
+        {
+          "donate": "Haz tu donación"
+        }
+      ]
     },
-    {
-      "text": "Juntos transformamos vidas en la Amazonía Colombiana."
+    "contactform": {
+      "labels": {
+        "subject": "Asunto",
+        "name": "Nombre",
+        "email": "Correo",
+        "message": "Mensaje"
+      },
+      "button": {
+        "submit": "Enviar"
+      }
     },
-    {
-      "text": "Más de 120 niñas protegidas y empoderadas gracias a tu apoyo"
+    "faq": {
+      "title": "Respuestas a",
+      "subtitle": "Preguntas de interés"
     },
-    {
-      "text": "Sé parte del cambio. Dona hoy y haz la diferencia"
+    "projects": {
+      "titles": [
+        {
+          "projectsyellow": "Tejiendo cambios",
+          "projectsred": "Conoce nuestros proyectos"
+        }
+      ],
+      "cards": [
+        {
+          "title": "Panadería: Sabores de Nuestra Tierra",
+          "text": "En TESUAM, nuestra panadería transforma ingredientes amazónicos en pan y repostería artesanal para consumo propio."
+        },
+        {
+          "title": "Educación Formal",
+          "text": "Cada día, nuestras niñas asisten a una escuela rural que les ofrece educación de calidad, empoderando su futuro"
+        },
+        {
+          "title": "Educación Formal",
+          "text": "Cada día, nuestras niñas asisten a una escuela rural que les ofrece educación de calidad, empoderando su futuro"
+        }
+      ]
     },
-    {
-      "text": "Haz un aporte en menos de 3 minutos desde tu celular o computador."
+    "stadistics": {
+      "titles": [
+        {
+          "stadisticsyellow": "Tejiendo esperanza",
+          "stadisticsred": "Nuestro impacto hasta ahora"
+        }
+      ],
+      "description": "Te presentamos los resultados de nuestros esfuerzos, una prueba tangible de nuestro compromiso con el cambio positivo. Cada número representa una vida transformada y un paso más cerca de nuestro objetivo de hacer del mundo un lugar mejor.",
+      "data": [
+        {
+          "value": 110,
+          "text": "TESUAM brinda protección, educación y oportunidades a más de 110 niñas y adolescentes en situación de vulnerabilidad.",
+          "modalContent": {
+            "title": "Niñas y adolescentes ayudadas",
+            "content": [
+              "43 niñas viven en la Fundación, recibiendo acompañamiento integral.",
+              "67 niños y niñas asisten a nuestros programas educativos y de formación sin residir en la Fundación.",
+              "Cada niña que acogemos tiene la oportunidad de transformar su futuro."
+            ]
+          }
+        },
+        {
+          "value": 13,
+          "text": "Nuestras alianzas con organizaciones nacionales e internacionales fortalecen nuestra labor y amplían nuestro impacto.",
+          "modalContent": {
+            "title": "Alianzas con instituciones",
+            "content": [
+              "Alianzas clave:",
+              "ICBF – Protección y derechos de la niñez.",
+              "Child Impact International – Apoyo financiero y educativo.",
+              "Iglesia Adventista del Séptimo Día – Formación espiritual y misional.",
+              "SENA Regional Guaviare – Formación técnica y capacitación laboral.",
+              "Npraxis International – Cooperación en programas de desarrollo infantil.",
+              "Policía Nacional de Colombia – Seguridad y prevención del delito.",
+              "Cámara de Comercio de San José del Guaviare – Vinculación con empresas y apoyo logístico.",
+              "Universidad Adventista de Colombia (UNAC) – Educación y voluntariado.",
+              "Apoyo de empresas privadas:",
+              "La Gran Bodega del Constructor",
+              "López Supermercado",
+              "Apoyo gubernamental y social:",
+              "Oficina de Gestión Social del Departamento del Guaviare – Programas de bienestar social.",
+              "Proyecto Superhumanos – Apoyo en voluntariado y asistencia social.",
+              "Sociedad civil – Donaciones y participación en voluntariado.",
+              "Alianzas en proceso de gestión:",
+              "Organismos internacionales y ONGs en educación, salud y derechos humanos."
+            ]
+          }
+        },
+        {
+          "value": 7410,
+          "text": "Cada mes, garantizamos alimentación nutritiva para nuestras niñas, colaboradores y familias en situación de vulnerabilidad.",
+          "modalContent": {
+            "title": "Distribución mensual",
+            "content": [
+              "Niñas residentes y equipo: +6.000 comidas.",
+              "Apoyo a familias y eventos comunitarios: 1.200 comidas adicionales."
+            ]
+          }
+        },
+        {
+          "value": 2,
+          "text": "Desde hace dos años, TESUAM ha sido un refugio de amor y transformación en San José del Guaviare.",
+          "modalContent": {
+            "title": "Nuestro impacto en la comunidad",
+            "content": [
+              "Detalles sobre nuestros 2 años de servicio y ayuda en la comunidad del departamento del Guaviare en Colombia."
+            ]
+          }
+        }
+      ]
+    },
+    "stories": {
+      "titles": [
+        {
+          "videosyellow": "Tejiendo cambios",
+          "videosred": "Historias transformadoras"
+        }
+      ],
+      "videos": [
+        {
+          "title": "Titulo 1",
+          "description": "Descripcion 1",
+          "buttonText": "Conoce más"
+        },
+        {
+          "title": "Titulo 2",
+          "description": "Descripcion 2",
+          "buttonText": "Conoce más"
+        }
+      ]
+    },
+    "volunteer": {
+      "titles": [
+        {
+          "volunteeryellow": "Apóyanos a través de",
+          "volunteerred": "Voluntariado"
+        }
+      ],
+      "videos": [
+        {
+          "title": "Titulo 1",
+          "description": "Descripcion 1",
+          "buttonText": "Conoce más"
+        }
+      ]
+    },
+    "contact": {
+      "title": "Contáctanos",
+      "subtitle": "Estamos aquí para ayudarte"
     }
-  ],
-  "titles": [
-    {
-      "stadisticsyellow": "Tejiendo esperanza",
-      "stadisticsred": "Nuestro impacto hasta ahora"
-    },
-    {
-      "projectsyellow": "Tejiendo cambios",
-      "projectsred": "Conoce nuestros proyectos"
-    },
-    {
-      "videosyellow": "Tejiendo cambios",
-      "videosred": "Historias transformadoras"
-    },
-    {
-      "volunteeryellow": "Apóyanos a través de",
-      "volunteerred": "Voluntariado"
-    },
-    {
-      "projectspagestadisticsred": "Proyectos que construyen país y aportan al desarrollo sostenible del planeta."
-    }
-  ],
-  "buttons": [
-    {
-      "more": "Conoce más"
-    },
-    {
-      "donate": "Haz tu donación"
-    }
-  ],
-  "carrousel": [
-    {
-      "title": "Conoce nuestras historias de impacto y esperanza.",
-      "description": "Descubre cómo juntos transformamos vidas en la Amazonía Colombiana."
-    },
-    {
-      "title": "Más de 120 niñas protegidas y empoderadas gracias a tu apoyo",
-      "description": "Sé parte del cambio. Dona hoy y haz la diferencia"
-    },
-    {
-      "title": "Haz un aporte en menos de 3 minutos desde tu celular o computador.",
-      "description": "Con tu donación, apoyas a más de 120 niñas en la Amazonía Colombiana."
-    }
-  ]
-  
+  }
 }

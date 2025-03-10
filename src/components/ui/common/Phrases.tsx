@@ -6,14 +6,14 @@ const Frases: React.FC = () => {
   
     useEffect(() => {
       const intervalId = setInterval(() => {
-        setFraseActual((prev) => (prev + 1) % phrases.phrasesbanner.length);
+        setFraseActual((prev) => (prev + 1) % phrases.homepage.carrousel.phrasesbanner.length);
       }, 4900);
   
       return () => clearInterval(intervalId);
-    }, [phrases.phrasesbanner]);
+    }, [phrases.homepage.carrousel.phrasesbanner]);
     return (
     <p className='animate-fade text-center text-foundationcoloryellow1 font-medium'>
-      {phrases.phrasesbanner[fraseActual].text}
+      {phrases.homepage.carrousel.phrasesbanner[fraseActual].text}
     </p>
 )};
 export default Frases;
