@@ -3,29 +3,20 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 
-interface Donacion {
+interface ContactFormEntry {
   id: number;
-  donante_id: number;
-  descripcion: string;
-  fecha_donacion: string;
-  valor_aproximado: string | null;
-  recibida: number;
-  categoria_id: number;
+  subject: string;
+  name: string;
+  email: string;
+  message: string;
+  created_at: string;
 }
 
-export default function DonacionesPage() {
+export default function ContactFormPage() {
   const router = useRouter();
-  const [donaciones, setDonaciones] = useState<Donacion[]>([]);
+  const [contactForms, setContactForms] = useState<ContactFormEntry[]>([]);
   const [isAuthenticated, setIsAuthenticated] = useState<boolean | null>(null);
-  const [editId, setEditId] = useState<number | null>(null);
-  const [form, setForm] = useState({
-    donante_id: "",
-    descripcion: "",
-    fecha_donacion: "",
-    valor_aproximado: "",
-    recibida: "0",
-    categoria_id: "",
-  });
+  const [editForm, setEditForm] = useState<ContactFormEntry | null>(null);
 
   useEffect(() => {
     checkAuthentication();
@@ -40,7 +31,7 @@ export default function DonacionesPage() {
 
       if (res.ok) {
         setIsAuthenticated(true);
-        fetchDonaciones();
+        fetchContactForms();
       } else {
         setIsAuthenticated(false);
         router.push("/login");
@@ -52,80 +43,58 @@ export default function DonacionesPage() {
     }
   };
 
-  const fetchDonaciones = async () => {
+  const fetchContactForms = async () => {
     try {
-      const res = await fetch("/api/dashboard/donaciones", { credentials: "include" });
+      const res = await fetch("/api/dashboard/contact-form", { credentials: "include" });
       if (res.status === 401 || res.status === 403) {
         router.push("/");
         return;
       }
-      setDonaciones(await res.json());
+      setContactForms(await res.json());
     } catch (error) {
-      console.error("Error fetching donaciones:", error);
+      console.error("Error fetching contact forms:", error);
     }
   };
 
-  const handleEdit = (donacion: Donacion) => {
-    // Convertir el valor aproximado a número entero sin formato de moneda
-    let valorLimpio = donacion.valor_aproximado ? donacion.valor_aproximado.replace(/[^\d]/g, "") : "";
-    
-    setEditId(donacion.id);
-    setForm({
-      donante_id: String(donacion.donante_id),
-      descripcion: donacion.descripcion,
-      fecha_donacion: donacion.fecha_donacion,
-      valor_aproximado: valorLimpio,
-      recibida: donacion.recibida ? "1" : "0",
-      categoria_id: String(donacion.categoria_id),
-    });
-  };
-
   const handleDelete = async (id: number) => {
-    if (!confirm("¿Seguro que deseas eliminar esta donación?")) return;
+    if (!confirm("¿Seguro que deseas eliminar este mensaje de contacto?")) return;
 
     try {
-      const res = await fetch("/api/dashboard/donaciones", {
+      const res = await fetch("/api/dashboard/contact-form", {
         method: "DELETE",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ id }),
       });
 
-      if (res.ok) fetchDonaciones();
+      if (res.ok) fetchContactForms();
     } catch (error) {
-      console.error("Error deleting donacion:", error);
+      console.error("Error deleting contact form entry:", error);
     }
+  };
+
+  const handleEdit = (entry: ContactFormEntry) => {
+    setEditForm(entry);
   };
 
   const handleUpdate = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!editId) return;
-
-    const body = {
-      id: editId,
-      donante_id: Number(form.donante_id),
-      descripcion: form.descripcion,
-      fecha_donacion: form.fecha_donacion,
-      valor_aproximado: form.valor_aproximado ? Number(form.valor_aproximado) : null,
-      recibida: form.recibida === "1" ? 1 : 0,
-      categoria_id: Number(form.categoria_id),
-    };
+    if (!editForm) return;
 
     try {
-      const res = await fetch("/api/dashboard/donaciones", {
+      const res = await fetch("/api/dashboard/contact-form", {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(body),
+        body: JSON.stringify(editForm),
       });
 
       if (res.ok) {
-        fetchDonaciones();
-        setForm({ donante_id: "", descripcion: "", fecha_donacion: "", valor_aproximado: "", recibida: "0", categoria_id: "" });
-        setEditId(null);
+        fetchContactForms();
+        setEditForm(null);
       } else {
-        console.error("Error al actualizar la donación:", await res.json());
+        console.error("Error updating contact form:", await res.json());
       }
     } catch (error) {
-      console.error("Error updating donacion:", error);
+      console.error("Error updating contact form:", error);
     }
   };
 
@@ -153,7 +122,7 @@ export default function DonacionesPage() {
   return (
     <div className="p-6">
       <div className="flex justify-between items-center mb-6">
-        <h1 className="text-2xl font-bold">Gestión de Donaciones</h1>
+        <h1 className="text-2xl font-bold">Gestión de Formularios de Contacto</h1>
         <div className="flex gap-4">
           <button
             onClick={() => router.push("/admin/donantes")}
@@ -176,17 +145,50 @@ export default function DonacionesPage() {
         </div>
       </div>
 
-      {editId && (
-        <form onSubmit={handleUpdate} className="mt-4 p-4 border rounded shadow">
-          <h2 className="text-lg font-semibold">Editar Donación</h2>
-          <input type="text" placeholder="Descripción" value={form.descripcion} onChange={(e) => setForm({ ...form, descripcion: e.target.value })} required className="w-full p-2 border rounded my-2" />
-          <input type="date" placeholder="Fecha de Donación" value={form.fecha_donacion} onChange={(e) => setForm({ ...form, fecha_donacion: e.target.value })} required className="w-full p-2 border rounded my-2" />
-          <input type="number" placeholder="Valor Aproximado" value={form.valor_aproximado} onChange={(e) => setForm({ ...form, valor_aproximado: e.target.value })} className="w-full p-2 border rounded my-2" />
-          <label className="flex items-center my-2">
-            <input type="checkbox" checked={form.recibida === "1"} onChange={(e) => setForm({ ...form, recibida: e.target.checked ? "1" : "0" })} className="mr-2" />
-            Recibida
-          </label>
-          <button type="submit" className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded">Actualizar</button>
+      {editForm && (
+        <form onSubmit={handleUpdate} className="mt-4 p-4 border rounded shadow bg-gray-100">
+          <h2 className="text-lg font-semibold">Editar Mensaje de Contacto</h2>
+          <input
+            type="text"
+            value={editForm.subject}
+            onChange={(e) => setEditForm({ ...editForm, subject: e.target.value })}
+            required
+            className="w-full p-2 border rounded my-2"
+            placeholder="Asunto"
+          />
+          <input
+            type="text"
+            value={editForm.name}
+            onChange={(e) => setEditForm({ ...editForm, name: e.target.value })}
+            required
+            className="w-full p-2 border rounded my-2"
+            placeholder="Nombre"
+          />
+          <input
+            type="email"
+            value={editForm.email}
+            onChange={(e) => setEditForm({ ...editForm, email: e.target.value })}
+            required
+            className="w-full p-2 border rounded my-2"
+            placeholder="Correo"
+          />
+          <textarea
+            value={editForm.message}
+            onChange={(e) => setEditForm({ ...editForm, message: e.target.value })}
+            required
+            className="w-full p-2 border rounded my-2"
+            placeholder="Mensaje"
+          ></textarea>
+          <button type="submit" className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded">
+            Guardar Cambios
+          </button>
+          <button
+            type="button"
+            onClick={() => setEditForm(null)}
+            className="bg-gray-400 hover:bg-gray-500 text-white py-2 px-4 rounded ml-2"
+          >
+            Cancelar
+          </button>
         </form>
       )}
 
@@ -194,27 +196,36 @@ export default function DonacionesPage() {
         <thead>
           <tr>
             <th>ID</th>
-            <th>Donante ID</th>
-            <th>Descripción</th>
-            <th>Fecha de Donación</th>
-            <th>Valor Aproximado</th>
-            <th>Recibida</th>
-            <th>Categoría ID</th>
+            <th>Asunto</th>
+            <th>Nombre</th>
+            <th>Correo</th>
+            <th>Mensaje</th>
+            <th>Fecha</th>
             <th>Acciones</th>
           </tr>
         </thead>
         <tbody>
-          {donaciones.map((d) => (
-            <tr key={d.id}>
-              <td>{d.id}</td>
-              <td>{d.donante_id}</td>
-              <td>{d.descripcion}</td>
-              <td>{d.fecha_donacion}</td>
-              <td>{d.valor_aproximado ?? "N/A"}</td>
-              <td>{d.recibida ? "Sí" : "No"}</td>
-              <td>{d.categoria_id}</td>
+          {contactForms.map((entry) => (
+            <tr key={entry.id}>
+              <td>{entry.id}</td>
+              <td>{entry.subject}</td>
+              <td>{entry.name}</td>
+              <td>{entry.email}</td>
+              <td>{entry.message}</td>
+              <td>{new Date(entry.created_at).toLocaleString()}</td>
               <td>
-                <button className="bg-yellow-400 text-white px-2 py-1 rounded mr-2" onClick={() => handleEdit(d)}>Editar</button>
+                <button
+                  className="bg-yellow-400 text-white px-2 py-1 rounded mr-2"
+                  onClick={() => handleEdit(entry)}
+                >
+                  Editar
+                </button>
+                <button
+                  className="bg-red-400 text-white px-2 py-1 rounded"
+                  onClick={() => handleDelete(entry.id)}
+                >
+                  Eliminar
+                </button>
               </td>
             </tr>
           ))}

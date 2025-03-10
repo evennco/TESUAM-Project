@@ -28,6 +28,8 @@ export default function DonacionesPage() {
   const [donaciones, setDonaciones] = useState<Donacion[]>([]);
   const [donantes, setDonantes] = useState<Donante[]>([]);
   const [categorias, setCategorias] = useState<Categoria[]>([]);
+  const [editId, setEditId] = useState<number | null>(null);
+
   const [form, setForm] = useState({
     donante_id: "",
     descripcion: "",
@@ -36,7 +38,6 @@ export default function DonacionesPage() {
     recibida: "0",
     categoria_id: "",
   });
-  const [editId, setEditId] = useState<number | null>(null);
 
   useEffect(() => {
     checkAuthentication();
@@ -47,14 +48,8 @@ export default function DonacionesPage() {
 
   const checkAuthentication = async () => {
     try {
-      const res = await fetch("/api/auth/cookieCheck", {
-        method: "GET",
-        credentials: "include",
-      });
-
-      if (res.status !== 200) {
-        router.push("/");
-      }
+      const res = await fetch("/api/auth/cookieCheck", { method: "GET", credentials: "include" });
+      if (res.status !== 200) router.push("/");
     } catch (error) {
       console.error("Error checking authentication:", error);
       router.push("/");
@@ -97,7 +92,7 @@ export default function DonacionesPage() {
       donante_id: String(donacion.donante_id),
       descripcion: donacion.descripcion,
       fecha_donacion: donacion.fecha_donacion,
-      valor_aproximado: donacion.valor_aproximado ? String(donacion.valor_aproximado) : "",
+      valor_aproximado: donacion.valor_aproximado !== null ? String(donacion.valor_aproximado) : "", // ✅ Se asegura de no dejar null
       recibida: donacion.recibida ? "1" : "0",
       categoria_id: String(donacion.categoria_id),
     });
@@ -112,7 +107,7 @@ export default function DonacionesPage() {
       donante_id: Number(form.donante_id),
       descripcion: form.descripcion,
       fecha_donacion: form.fecha_donacion,
-      valor_aproximado: form.valor_aproximado ? Number(form.valor_aproximado) : null,
+      valor_aproximado: form.valor_aproximado !== "" ? Number(form.valor_aproximado) : null,
       recibida: form.recibida === "1" ? 1 : 0,
       categoria_id: Number(form.categoria_id),
     };
@@ -136,38 +131,12 @@ export default function DonacionesPage() {
     }
   };
 
-  const handleLogout = async () => {
-    try {
-      const res = await fetch("/api/auth/logout", {
-        method: "POST",
-        credentials: "include",
-      });
-
-      if (res.ok) {
-        router.push("/");
-      } else {
-        console.error("Error during logout");
-      }
-    } catch (error) {
-      console.error("Logout error:", error);
-    }
-  };
-
   return (
     <div className="p-6">
       <div className="flex justify-between items-center mb-6">
         <h1 className="text-2xl font-bold">Gestión de Donaciones</h1>
-        <button
-            onClick={() => router.push("/admin")}
-            className="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-lg shadow"
-          >
-            Admin
-          </button>
-        <button
-          onClick={handleLogout}
-          className="bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded-lg shadow"
-        >
-          Cerrar Sesión
+        <button onClick={() => router.push("/admin")} className="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-lg shadow">
+          Admin
         </button>
       </div>
 
@@ -185,20 +154,51 @@ export default function DonacionesPage() {
         <input type="date" placeholder="Fecha de Donación" value={form.fecha_donacion} onChange={(e) => setForm({ ...form, fecha_donacion: e.target.value })} required className="w-full p-2 border rounded my-2" />
         <input type="number" placeholder="Valor Aproximado" value={form.valor_aproximado} onChange={(e) => setForm({ ...form, valor_aproximado: e.target.value })} className="w-full p-2 border rounded my-2" />
 
-        <select value={form.categoria_id} onChange={(e) => setForm({ ...form, categoria_id: e.target.value })} required className="w-full p-2 border rounded my-2">
-          <option value="">Seleccionar Categoría</option>
-          {categorias.map((c) => (
-            <option key={c.id} value={c.id}>{c.nombre}</option>
-          ))}
-        </select>
-
         <label className="flex items-center my-2">
-          <input type="checkbox" checked={form.recibida === "1"} onChange={(e) => setForm({ ...form, recibida: e.target.checked ? "1" : "0" })} className="mr-2" />
+          <input
+            type="checkbox"
+            checked={form.recibida === "1"}
+            onChange={(e) => setForm({ ...form, recibida: e.target.checked ? "1" : "0" })}
+            className="mr-2"
+          />
           Recibida
         </label>
 
-        <button type="submit" className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded">{editId ? "Actualizar" : "Agregar"}</button>
+        <button type="submit" className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded">
+          {editId ? "Actualizar" : "Agregar"}
+        </button>
       </form>
+
+      {/* ✅ LISTA DE DONACIONES */}
+      <h2 className="text-lg font-semibold mt-6 mb-4">Lista de Donaciones</h2>
+      <table className="w-full border mt-2">
+        <thead>
+          <tr className="bg-gray-100">
+            <th>ID</th>
+            <th>Donante ID</th>
+            <th>Descripción</th>
+            <th>Fecha de Donación</th>
+            <th>Valor Aproximado</th>
+            <th>Recibida</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          {donaciones.map((d) => (
+            <tr key={d.id}>
+              <td>{d.id}</td>
+              <td>{d.donante_id}</td>
+              <td>{d.descripcion}</td>
+              <td>{d.fecha_donacion}</td>
+              <td>{d.valor_aproximado ?? "N/A"}</td>
+              <td>{d.recibida ? "Sí" : "No"}</td>
+              <td>
+                <button className="bg-yellow-400 text-white px-2 py-1 rounded" onClick={() => handleEdit(d)}>Editar</button>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 }
