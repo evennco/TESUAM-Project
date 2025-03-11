@@ -80,7 +80,6 @@
           "question": "¿Puedo visitar la Fundación?",
           "answer": "Sí, recibimos visitas bajo previa coordinación. Contáctanos para programar una visita y conocer más sobre nuestro impacto."
         }
-
       ]
     },
     "projects": {
@@ -225,6 +224,9 @@
         },
         {
           "donate": "Haz tu donación"
+        },
+        {
+          "Plus": "Ver más"
         }
       ]
     },
@@ -232,6 +234,216 @@
       "title": "Tejiendo cambios",
       "subtitle": "Nuestro impacto en proyectos"
     },
+    "stadisticsprojectsCards": [
+      {
+        "value": 12,
+        "text": "Proyectos exitosamente culminados",
+        "modalContent": {
+          "title": "",
+          "content": [
+            "Experiencias Comunitarias: Convivencia y aprendizaje en conjunto con otras comunidades para enriquecer saberes y fortalecer vínculos.",
+            "Atrapasueños (ICBF): Programa en alianza con el ICBF que protege y potencia el desarrollo infantil.",
+            "Educación Formal: Asistencia diaria a una escuela rural que garantiza una formación académica sólida.",
+            "Competencias para la Vida: Formación en valores, hábitos saludables y habilidades sociales para un bienestar integral.",
+            "Avícola: Gestión de 550 gallinas ponedoras que asegura una producción local de alimentos nutritivos.",
+            "Panadería: Elaboración artesanal de pan con ingredientes amazónicos, celebrando nuestra tradición local.",
+            "Tejidos: Creación de artesanías interculturales que preservan tradiciones y fomentan la creatividad.",
+            "Deporte: Fusión de deportes ancestrales y modernos que impulsa hábitos saludables y el trabajo en equipo.",
+            "Arte y Muralismo: Expresión artística a través de óleo, vinilos, carboncillo y tintes naturales, transformando emociones en arte.",
+            "Modistería: Capacitación en máquinas industriales y fileteadoras que se empodera a través del diseño y la confección.",
+            "Gastronomía Indígena: Producción de casabe, fariña y alimentos con enfoque intercultural para rescatar tradiciones culinarias.",
+            "Casa Refugio Tejiendo Sueños: Un hogar seguro que impulsa el bienestar, la transformación y la cohesión de la comunidad."
+          ]
+        }
+      },
+      {
+        "value": 1,
+        "text": "Proyectos en desarrollo",
+        "modalContent": {
+          "title": "Detalles de proyectos en desarrollo",
+          "content": [
+            "Casa para Colaboradores, Voluntarios y Misioneros: Un espacio en desarrollo que será el punto de encuentro y descanso para quienes impulsan el cambio. Este hogar colaborativo fortalecerá redes de apoyo y facilitará la formación y el trabajo en equipo."
+          ]
+        }
+      },
+      {
+        "value": 5,
+        "text": "Proyectos en planeación y viabilidad",
+        "modalContent": {
+          "title": "Descubre nuestros 5 proyectos en planeación y viabilidad:",
+          "content": [
+            "Parque Infantil: Un espacio seguro para que nuestras niñas disfruten y se desarrollen en un entorno lúdico y protegido.",
+            "Agua potable: Una solución esencial para garantizar agua limpia y segura, recurso vital que fortalece la salud y el aprendizaje.",
+            "Luz Trifásica: Energía estable que impulsa el desarrollo de actividades y fortalece el día a día de la comunidad.",
+            "Cultivos amazónicos y huerta casera: Un proyecto de sostenibilidad que impulsa la producción local de alimentos frescos y nutritivos, fortaleciendo la seguridad alimentaria y promoviendo su consumo responsable.",
+            "Ampliación de Infraestructura: Creando espacios innovadores que potencian la educación, recreación y bienestar integral.",
+            "Cada proyecto es un hilo más en el tejido de esperanza y transformación para construir un mañana mejor."
+          ]
+        }
+      },
+      {
+        "value": 7,
+        "text": "Objetivos de desarrollo sostenible priorizados",
+        "modalContent": {
+          "title": "ODS priorizados",
+          "content": [
+            "Objetivo #1: Fin de la Pobreza: Erradicar la pobreza es el primer paso hacia un futuro justo. TESUAM transforma vidas brindando apoyo integral a niñas en situación de vulnerabilidad.",
+            "Objetivo #2: Hambre Cero: Garantizar alimentos nutritivos es esencial para el desarrollo. Con proyectos autosostenibles, fomentamos la seguridad alimentaria en nuestra comunidad.",
+            "Objetivo #3: Salud y Bienestar: El bienestar integral es la base para un futuro pleno. Aseguramos acceso a recursos vitales y espacios seguros que promueven la salud física y emocional.",
+            "Objetivo #4: Educación de Calidad: La educación empodera y abre puertas a nuevas oportunidades. Ofrecemos formación integral que impulsa el crecimiento personal y profesional de cada niña.",
+            "Objetivo #5: Igualdad de Género: Fomentamos un entorno de equidad y respeto, donde cada niña y mujer pueda desarrollarse sin barreras y alcanzar su máximo potencial.",
+            "Objetivo #16: Paz y Justicia: Construir comunidades seguras y justas es esencial para el progreso. Trabajamos para generar entornos de convivencia pacífica y equidad social.",
+            "Objetivo #17: Alianzas: La colaboración es el motor del cambio. Forjamos alianzas estratégicas que potencian nuestras iniciativas y amplían el impacto transformador."
+          ]
+        }
+      }
+    ],
+    "cards": [
+      {
+        "title": "Un hogar para quienes transforman",
+        "text": "Un espacio seguro que une a colaboradores, voluntarios y misioneros para forjar alianzas y transformar vidas.",
+        "labels": {
+          "blue": "Alianzas",
+          "green": "ODS 17"
+        },
+        "hover": {
+          "title": "",
+          "text": "En TESUAM, el motor de nuestro cambio son las personas comprometidas con la transformación. Con este proyecto creamos un espacio cálido y seguro donde colaboradores, voluntarios y misioneros pueden descansar, trabajar y conectarse. Es mucho más que una casa: es un refugio que fortalece la coordinación, inspira nuevas ideas y potencia cada acción transformadora. Este espacio mejora la calidad de vida de quienes día a día impulsan nuestra misión, ofreciendo un ambiente de bienestar que fomenta la creatividad y el trabajo en equipo. Además, se convierte en un símbolo tangible del compromiso de TESUAM con su comunidad, facilitando la formación, el intercambio de experiencias y la planificación de proyectos de impacto."
+        }
+      },
+      {
+        "title": "Arte y muralismo",
+        "text": " Un espacio creativo donde el óleo, vinilos, carboncillo y tintes naturales se unen a la música para transformar emociones en bienestar y empoderamiento.",
+        "labels": {
+          "blue": "Salud y bienestar",
+          "green": "ODS 3"
+        },
+        "hover": {
+          "title": "",
+          "text": "En TESUAM, el arte es un puente que conecta el alma con el cambio. Este proyecto integra diversas técnicas, pintura en óleo, vinilos, carboncillo y arte con tintes naturales–, y complementa estas expresiones visuales con la música, que da voz a emociones y sueños. Al explorar la creatividad, las niñas fortalecen su bienestar emocional y construyen su identidad, transformando el dolor en esperanza."
+        }
+      },
+      {
+        "title": "Competencias para la Vida Formación Integral en Valores y Hábitos Saludables",
+        "text": "Espacio que fomenta valores, hábitos saludables y habilidades sociales para el bienestar.",
+        "labels": {
+          "blue": "Salud y bienestar",
+          "green": "ODS 3"
+        },
+        "hover": {
+          "title": "",
+          "text": "En TESUAM creemos que el bienestar se construye desde adentro. Con este proyecto, impulsamos una formación integral que fortalece los valores, promueve hábitos saludables y desarrolla habilidades sociales esenciales para la vida diaria. A través de talleres interactivos y actividades prácticas, las niñas aprenden a cuidar su cuerpo y mente, estableciendo rutinas que favorecen una alimentación balanceada, el ejercicio y el autocuidado. Este proyecto no solo refuerza la salud física, sino que también fomenta el desarrollo emocional y social, creando un entorno de aprendizaje en el que cada niña se siente valorada y empoderada para tomar decisiones responsables."
+        }
+      },
+      {
+        "title": "Granja avícola",
+        "text": "Producción sostenible de huevos y carne de pollo para el consumo de nuestros niños y comercialización local.",
+        "labels": {
+          "blue": "Hambre cero",
+          "green": "ODS 2"
+        },
+        "hover": {
+          "title": "",
+          "text": "En TESUAM, la Granja Avícola es una iniciativa integral que fusiona autosostenibilidad y seguridad alimentaria. Con alrededor de 550 gallinas ponedoras, producimos de manera sostenible huevos y carne de pollo, destinados tanto al consumo nutritivo de nuestras niñas como a la comercialización local. Este proyecto garantiza un suministro constante de alimentos de calidad, fortaleciendo la seguridad alimentaria y promoviendo prácticas agrícolas responsables. Además, al generar ingresos a través de la venta local, se impulsa el desarrollo económico de la comunidad y se fomenta la autosuficiencia. "
+        }
+      },
+      {
+        "title": "Panadería",
+        "text": " Elaboramos pan y repostería artesanal con ingredientes amazónicos para consumo propio",
+        "labels": {
+          "blue": "Hambre cero",
+          "green": "ODS 2"
+        },
+        "hover": {
+          "title": "",
+          "text": "En TESUAM, nuestra panadería va más allá de la elaboración de pan y productos de repostería; es una fusión de tradición y nutrición. Utilizando ingredientes amazónicos, creamos delicias artesanales que nutren a nuestras niñas y celebran el sabor de nuestra tierra. Este proyecto garantiza alimentos saludables para el consumo propio, al tiempo que promueve prácticas sostenibles y el consumo responsable"
+        }
+      },
+      {
+        "title": "Productos Amazónicos",
+        "text": "Producción sostenible de huevos y carne de pollo que nutre, genera ingresos y enseña prácticas agropecuarias.",
+        "labels": {
+          "blue": "Hambre cero",
+          "green": "ODS 2"
+        },
+        "hover": {
+          "title": "",
+          "text": "Promovemos la producción sostenible de huevos y carne de pollo, garantizando una fuente de alimentación nutritiva para nuestras niñas y generando ingresos mediante su comercialización local. Además, este proyecto fomenta la educación agropecuaria, brindando a las niñas conocimientos prácticos sobre el manejo responsable de recursos, el bienestar animal y la autosostenibilidad."
+        }
+      },
+      {
+        "title": "Un hogar para quienes transforman",
+        "text": "Un espacio seguro que une a colaboradores, voluntarios y misioneros para forjar alianzas y transformar vidas.",
+        "labels": {
+          "blue": "Salud y bienestar",
+          "green": "ODS 3"
+        },
+        "hover": {
+          "title": "",
+          "text": "En TESUAM, la Casa Refugio Tejiendo Sueños es el corazón del cuidado y la transformación. Este proyecto se ha concebido como un hogar integral donde nuestros niños encuentran un espacio seguro y acogedor para descansar, aprender y conectarse. Más que una edificación, es un entorno de convivencia, educación y recreación que impulsa el bienestar emocional y fortalece la resiliencia de la comunidad. Al brindar un refugio que inspira esperanza y promueve la unión, este proyecto refuerza nuestro compromiso de transformar vidas de manera integral."
+        }
+      },
+      {
+        "title": "Modistería: Capacitación y Empoderamiento.",
+        "text": "Capacitación en máquinas industriales y fileteadoras que empodera habilidades técnicas.",
+        "labels": {
+          "blue": "Educación de Calidad",
+          "green": "ODS 4"
+        },
+        "hover": {
+          "title": "",
+          "text": "En TESUAM, la modistería se erige como un proyecto formativo que abre puertas a un futuro independiente y lleno de oportunidades. A través de la capacitación en el manejo de máquinas industriales y fileteadoras, nuestras niñas adquieren habilidades técnicas en diseño y confección, esenciales para su inserción en el mundo laboral. Este espacio educativo potencia la creatividad, eleva la autoestima y les brinda herramientas prácticas para transformar su futuro."
+        }
+      },
+      {
+        "title": "Deporte: Fusión entre Tradición y Modernidad",
+        "text": "Fusionamos prácticas ancestrales y modernas para impulsar hábitos saludables, disciplina y bienestar integral.",
+        "labels": {
+          "blue": "Igualdad de Género",	
+          "green": "ODS 5"
+        },
+        "hover": {
+          "title": "",
+          "text": "En TESUAM, el Deporte integra la riqueza de las prácticas deportivas ancestrales con técnicas modernas para crear un espacio de bienestar integral. A través de una variedad de actividades, fomentamos la salud física y emocional, promoviendo la disciplina, la resiliencia y el trabajo en equipo. Esta fusión no solo rescata tradiciones culturales, sino que también impulsa la adopción de hábitos saludables y el empoderamiento personal."
+        }
+      },
+      {
+        "title": "Parque Infantil: Espacio Seguro para el Esparcimiento",
+        "text": "Un espacio seguro y lúdico para el esparcimiento de los niños, que fomenta un entorno de convivencia pacífica y equidad.",
+        "labels": {
+          "blue": "Paz y Justicia",
+          "green": "ODS 16"
+        },
+        "hover": {
+          "title": "",
+          "text": "Este proyecto en planeación creará un entorno seguro y estimulante donde nuestras niñas podrán disfrutar del juego y la recreación. Diseñado para fomentar el desarrollo físico, social y emocional, el parque ofrecerá áreas de esparcimiento, zonas de aprendizaje al aire libre y espacios de descanso. Al proporcionar un lugar dedicado al juego, contribuimos a fortalecer la salud, la autoestima y la resiliencia de las niñas, reafirmando nuestro compromiso con un futuro lleno de esperanza y bienestar."
+        }
+      },
+      {
+        "title": "Cultivos Amazónicos y Huerta Casera",
+        "text": "Producción local sostenible que impulsa oportunidades económicas y rompe el ciclo de la pobreza.",
+        "labels": {
+          "blue": "Fin de la Pobreza",
+          "green": "ODS 1"
+        },
+        "hover": {
+          "title": "",
+          "text": "Este proyecto en planeación potenciará la producción local de alimentos a través de prácticas agrícolas sostenibles y técnicas ancestrales. Al impulsar cultivos nutritivos y autosuficientes, generamos oportunidades económicas y contribuimos a romper el ciclo de la pobreza en la comunidad."
+        }
+      },
+      {
+        "title": "Ampliación de Infraestructura",
+        "text": "Nuevos espacios para educación, recreación y bienestar que potencian el desarrollo integral.",
+        "labels": {
+          "blue": "Educación de Calidad",
+          "green": "ODS 4"
+        },
+        "hover": {
+          "title": "",
+          "text": "Buscamos crear y modernizar espacios que impulsen el aprendizaje, el esparcimiento y el bienestar integral. Con nuevas aulas, zonas de recreación y áreas de encuentro, fortalecemos la calidad educativa y promovemos un entorno seguro y estimulante para el desarrollo personal."
+        }
+      }
+    ],
     "bigminititle": {
       "title": "Tejiendo cambios",
       "subtitle": "Conoce nuestros proyectos"

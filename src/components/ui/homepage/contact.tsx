@@ -1,5 +1,5 @@
 import Image from "next/image";
-import carrousel1 from "../../../../public/carrousel1.png";
+import carrousel1 from "/public/carrousel1.png";
 import BigTitle from "../common/bigtitle";
 import MoreButton from '@/components/ui/common/MoreButton';
 import ContactForm from "@/components/ui/common/contactform";

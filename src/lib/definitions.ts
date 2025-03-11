@@ -20,15 +20,16 @@ export interface InfiniteCarouselItem {
   src: StaticImageData;
 }
 
-export interface StadisticsCardProps {
-  value: number;
-  text: string;
-}
-
 export interface ProjectsCardProps {
   image: StaticImageData;
   title: string;
   text: string;
+  labels?: {
+    blue: string;
+    green: string;
+  };
+  hoverTitle?: string;
+  hoverText?: string;
 }
 
 export interface ProjectsComponentProps {

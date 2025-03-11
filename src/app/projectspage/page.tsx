@@ -16,15 +16,15 @@ export default function Projectspage() {
         <StadisticsProjects />
         <HashtagBanner text="#TejiendoCambios" />
         <BigMiniTitle title={phrases.projects.bigminititle.title || "Default Title"} subtitle={phrases.projects.bigminititle.subtitle || "Default Subtitle"} />
-        <ProjectsComponent images={imagesSet1} />
+        <ProjectsComponent images={imagesSet1} offset={0} />
         <HashtagBanner text="#TejiendoCambios" />
         <BigMiniTitle title={phrases.projects.bigminititle.title || "Default Title"} subtitle={phrases.projects.bigminititle.subtitle || "Default Subtitle"} />
-        <ProjectsComponent images={imagesSet2} />
+        <ProjectsComponent images={imagesSet2} offset={3} />
         <HashtagBanner text="#TejiendoCambios" />
         <BigMiniTitle title={phrases.projects.bigminititle.title || "Default Title"} subtitle={phrases.projects.bigminititle.subtitle || "Default Subtitle"} />
-        <ProjectsComponent images={imagesSet3} />
+        <ProjectsComponent images={imagesSet3} offset={6} />
         <BigMiniTitle title={phrases.projects.bigminititle.title || "Default Title"} subtitle={phrases.projects.bigminititle.subtitle || "Default Subtitle"} />
-        <ProjectsComponent images={imagesSet4} />
+        <ProjectsComponent images={imagesSet4} offset={9} />
         <Projectsform />
       </div>
     </main>

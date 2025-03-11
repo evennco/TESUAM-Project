@@ -2,7 +2,7 @@
 import Image from 'next/image';
 import React, { memo } from 'react';
 import phrases from '@/assets/locales/es.json';
-import carrousel2 from '../../../../public/carrousel2.png';
+import carrousel2 from '/public/carrousel2.png';
 import MoreButton from '@/components/ui/common/MoreButton';
 import DonateButton from '@/components/ui/common/DonateButton';
 
