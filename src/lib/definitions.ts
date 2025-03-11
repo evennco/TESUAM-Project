@@ -91,3 +91,10 @@ export interface StadisticsCardProps {
   text: string;
   onOpenModal ?: () => void;
 }
+export interface VideocardProps {
+  videoUrl: string;
+  title: string;
+  description: string;
+  buttonText: string;
+  onButtonClick ?: () => void;
+}

@@ -3,7 +3,6 @@ import InfiniteCarousel from '@/components/ui/homepage/infinitecarrousel';
 import Stadistics from '@/components/ui/homepage/stadistics';
 import Projects from '@/components/ui/homepage/projects';
 import Stories from '@/components/ui/homepage/stories';
-import Volunteer from '@/components/ui/homepage/volunteer';
 import Faq from '@/components/ui/homepage/faq';
 import Contact from '@/components/ui/homepage/contact';
 import { carrouseldata } from '@/lib/utils';

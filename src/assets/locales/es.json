@@ -54,7 +54,34 @@
     },
     "faq": {
       "title": "Respuestas a",
-      "subtitle": "Preguntas de interés"
+      "subtitle": "Preguntas de interés",
+      "data": [
+        {
+          "question": "¿Dónde estamos ubicados?",
+          "answer": "Nuestra sede se encuentra en San José del Guaviare, Guaviare, Colombia."
+        },
+        {
+          "question": "¿Cómo puedo donar?",
+          "answer": "Puedes apoyar nuestra misión de dos maneras:Donaciones en dinero: Haz tu aporte a través del botón 'Donar' en la parte superior derecha. Donaciones en especie: Contribuye con alimentos, ropa, útiles escolares o insumos esenciales."
+        },
+        {
+          "question": "¿Tienen redes sociales?",
+          "answer": "Sí, puedes encontrarnos en todas las redes sociales como @tesuam."
+        },
+        {
+          "question": "¿Cuántas niñas reciben apoyo en TESUAM?",
+          "answer": "Actualmente, más de 110 niñas y adolescentes se benefician de nuestros programas. 43 niñas residen en la Fundación. 67 niños y niñas asisten a actividades y programas externos."
+        },
+        {
+          "question": "¿Cómo se sostiene la fundación?",
+          "answer": "TESUAM opera gracias a donaciones, voluntariado y alianzas con organizaciones como el ICBF, el SENA, Child Impact International y la Iglesia Adventista del Séptimo Día."
+        },
+        {
+          "question": "¿Puedo visitar la Fundación?",
+          "answer": "Sí, recibimos visitas bajo previa coordinación. Contáctanos para programar una visita y conocer más sobre nuestro impacto."
+        }
+
+      ]
     },
     "projects": {
       "titles": [
@@ -70,7 +97,7 @@
         },
         {
           "title": "Educación Formal",
-          "text": "Cada día, nuestras niñas asisten a una escuela rural que les ofrece educación de calidad, empoderando su futuro"
+          "text": "Cada día, nuestras niñas asisten a una escuela rural que les ofrece educación de calidad, empoderando su futuro y abriendo nuevas oportunidades"
         },
         {
           "title": "Educación Formal",
@@ -105,7 +132,6 @@
           "modalContent": {
             "title": "Alianzas con instituciones",
             "content": [
-              "Alianzas clave:",
               "ICBF – Protección y derechos de la niñez.",
               "Child Impact International – Apoyo financiero y educativo.",
               "Iglesia Adventista del Séptimo Día – Formación espiritual y misional.",
@@ -114,15 +140,13 @@
               "Policía Nacional de Colombia – Seguridad y prevención del delito.",
               "Cámara de Comercio de San José del Guaviare – Vinculación con empresas y apoyo logístico.",
               "Universidad Adventista de Colombia (UNAC) – Educación y voluntariado.",
-              "Apoyo de empresas privadas:",
-              "La Gran Bodega del Constructor",
-              "López Supermercado",
-              "Apoyo gubernamental y social:",
-              "Oficina de Gestión Social del Departamento del Guaviare – Programas de bienestar social.",
-              "Proyecto Superhumanos – Apoyo en voluntariado y asistencia social.",
-              "Sociedad civil – Donaciones y participación en voluntariado.",
-              "Alianzas en proceso de gestión:",
-              "Organismos internacionales y ONGs en educación, salud y derechos humanos."
+              "La Gran Bodega del Constructor.",
+              "López Supermercado.",
+              "Oficina de Gestión social del Departamento del Guaviare - Programas de bienestar social",
+              "Proyecto Superhumanos - Apoyo en voluntariado y asistencia social",
+              "Sociedad civil - Donaciones y participación en voluntariado.",
+              "Organismos internacionales y ONGs en educación, salud y derechos humanos.",
+              "Cada alianza nos ayuda a cambiar vidas."
             ]
           }
         },
@@ -143,7 +167,10 @@
           "modalContent": {
             "title": "Nuestro impacto en la comunidad",
             "content": [
-              "Detalles sobre nuestros 2 años de servicio y ayuda en la comunidad del departamento del Guaviare en Colombia."
+              "Educación y protección para niñas en situación de riesgo",
+              "Creación de proyectos autosostenibles: panadería, huerta, granja avícola",
+              "Espacios de formación en valores y crecimiento personal",
+              "Este es solo el comienzo. Sé parte del futuro de TESUAM."
             ]
           }
         }
@@ -187,6 +214,268 @@
     "contact": {
       "title": "Contáctanos",
       "subtitle": "Estamos aquí para ayudarte"
+    }
+  },
+  "projects": {
+    "projectsbanner": {
+      "title": "Conoce nuestros proyectos de impacto y acción social",
+      "buttons": [
+        {
+          "more": "Conoce más"
+        },
+        {
+          "donate": "Haz tu donación"
+        }
+      ]
+    },
+    "stadisticsprojects": {
+      "title": "Tejiendo cambios",
+      "subtitle": "Nuestro impacto en proyectos"
+    },
+    "bigminititle": {
+      "title": "Tejiendo cambios",
+      "subtitle": "Conoce nuestros proyectos"
+    },
+    "projectsform": {
+      "title": "Apóyanos a través de",
+      "subtitle": "Voluntariado"
+    }
+  },
+  "about": {
+    "carrousel": {
+      "location": "Amazonia, Colombia",
+      "address": "📍 San José del Guaviare, Guaviare",
+      "buttons": [
+        {
+          "more": "Redes Sociales"
+        },
+        {
+          "donate": "Contáctanos"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Nuestra Misión",
+          "description": "Conoce nuestra fundación y nuestro impacto en las comunidades."
+        },
+        {
+          "title": "Nuestro Equipo",
+          "description": "Conoce las personas que contribuyen diariamente a nuestra misión."
+        },
+        {
+          "title": "Nuestra Fundación",
+          "description": "Conoce notas de prensa e imágenes de nuestra acción social."
+        }
+      ]
+    },
+    "mission": {
+      "title": "Nuestra Misión",
+      "description": "Proveer un entorno de amor, seguridad y reconstrucción para niñas y adolescentes víctimas de violencia, fortaleciendo la identidad cultural y la educación inclusiva en la Amazonía colombiana."
+    },
+    "whoarewe": {
+      "title": "Fundación Tejiendo Sueños en la Amazonia",
+      "description": "En TESUAM, transformamos vidas y tejemos esperanza.",
+      "sections": [
+        {
+          "title": "Ubicados en",
+          "subtitle": "Guaviare, Colombia",
+          "description": "Nuestra sede de operaciones."
+        },
+        {
+          "title": "Acciones con",
+          "subtitle": "Impacto Social",
+          "description": "Por el bienestar de nuestra comunidad."
+        },
+        {
+          "title": "Revisa la",
+          "subtitle": "Historia de la Fundación",
+          "description": "Transformando vidas desde 2022."
+        },
+        {
+          "title": "Infórmate sobre",
+          "subtitle": "Donaciones",
+          "description": "Tienes el poder de cambiar una vida."
+        },
+        {
+          "title": "Trabajando por",
+          "subtitle": "Desarrollo Sostenible",
+          "description": "Juntos construimos un mejor país."
+        },
+        {
+          "title": "Infórmate sobre",
+          "subtitle": "Voluntariado",
+          "description": "Y otras maneras de ayudar."
+        }
+      ]
+    },
+    "aboutForm": {
+      "title": "Apóyanos a través de",
+      "subtitle": "Voluntariado"
+    }
+  },
+  "support": {
+    "supportBanner": {
+      "title": "Conoce nuestros proyectos de impacto y acción social",
+      "buttons": [
+        {
+          "more": "Conoce más"
+        },
+        {
+          "donate": "Haz tu donación"
+        }
+      ]
+    },
+    "supportForm": {
+      "title": "Dona con alegría",
+      "subtitle": "Tu contribución transforma vidas"
+    },
+    "cards": [
+      {
+        "title": "¿POR QUÉ DONAR?",
+        "description": "Conoce el gran impacto que puedes generar con tu aporte.",
+        "modalContent": {
+          "title": "Más detalles: ¿Por qué donar?",
+          "content": [
+            "✨ Impactar una vida es cambiar el futuro.",
+            "💬 Tu donación ayuda a transformar la vida de niñas y comunidades en situación de vulnerabilidad, proporcionándoles educación, alimentación, refugio y oportunidades para un mejor futuro. Creemos en la importancia de brindar esperanza a través del amor y el servicio.",
+            "🔍 En TESUAM, cada aporte es una semilla de esperanza.",
+            "Tu donación nos permite:",
+            "   ✅ Brindar alimentación y atención integral a niñas en situaciones difíciles.",
+            "   ✅ Apoyar su educación y formación, para que construyan un futuro con oportunidades.",
+            "   ✅ Sostener nuestros programas de desarrollo, ayuda humanitaria y fortalecimiento comunitario.",
+            "   ✅ Cumplir nuestra misión de ser luz y esperanza, reflejando el amor de Dios en acción.",
+            "Dios nos llama a cuidar de los más necesitados:",
+            "📖 \"En verdad les digo que en cuanto lo hicieron a uno de estos hermanos míos más pequeños, a mí me lo hicieron.\" — Mateo 25:40",
+            "Cada donación es un acto de fe que transforma vidas. ¿Te unes a esta misión?"
+          ]
+        }
+      },
+      {
+        "title": "¿CÓMO PUEDO DONAR?",
+        "description": "Conoce los medios en los que puedes contribuir a nuestra misión.",
+        "modalContent": {
+          "title": "Formas de donar",
+          "content": [
+            "1. Donaciones en dinero: Tu aporte económico garantiza educación, alimentación y un hogar seguro para nuestras niñas. Para donar en línea, haz clic en el botón \"Donar\" en la esquina superior derecha.",
+            "2. Donaciones en especie: Aporta insumos esenciales como alimentos no perecederos, ropa y calzado en buen estado, útiles escolares, material didáctico y productos de aseo e higiene personal."
+          ]
+        }
+      },
+      {
+        "title": "BENEFICIOS DE DONAR",
+        "description": "Tu donación no es solo dinero, es esperanza, fe y transformación para niñas en extrema vulnerabilidad.",
+        "modalContent": {
+          "title": "Beneficios de donar",
+          "content": [
+            "Impacto real y tangible:",
+            "• Transformas vidas: Brindas educación, alimentación y un hogar seguro a niñas rescatadas de la violencia.",
+            "• Rompes ciclos de pobreza: Cada aporte ayuda a que las niñas construyan un futuro digno y autónomo.",
+            "• Apoyas proyectos autosostenibles: Contribuyes al crecimiento de huertas, panadería y otras iniciativas que garantizan la sostenibilidad de TESUAM.",
+            "Beneficios para ti:",
+            "• Recibe un certificado de donación como reconocimiento oficial por tu aporte solidario.",
+            "• Transparencia y confianza: Recibes reportes sobre el impacto de tu donación y cómo se utiliza.",
+            "• Conexión con la causa: Eres parte de una comunidad comprometida con la protección infantil y el cambio social.",
+            "• Vives el amor en acción: Tu generosidad refleja el llamado a ayudar al prójimo y proteger a los más vulnerables.",
+            "• Siembras bendiciones: \"Dios ama al dador alegre\" (2 Corintios 9:7). Tu apoyo es una obra de fe que traerá frutos en tu vida."
+          ]
+        }
+      }
+    ],
+    "donateMoney": {
+      "title": "Dona dinero, transforma vidas",
+      "subtitle": "Tu aporte económico hace posible que sigamos cambiando vidas."
+    },
+    "supportVolunteer": {
+      "title": "Apóyanos a través del Voluntariado",
+      "subtitle": "Descubre cómo puedes contribuir a nuestra causa con tu tiempo y dedicación",
+      "faqs": [
+        {
+          "question": "¿Por qué hacer un voluntariado en TESUAM?",
+          "answer": "Porque tu tiempo y talento pueden transformar vidas. TESUAM ofrece un espacio seguro donde las niñas rescatadas de la vulnerabilidad encuentran esperanza, educación y oportunidades. Al ser voluntario, te conviertes en parte de este cambio real y significativo."
+        },
+        {
+          "question": "Beneficios de hacer un voluntariado en TESUAM",
+          "answer": "Impacto directo: Ayudas a niñas a construir un futuro digno. Crecimiento personal y profesional: Adquieres nuevas habilidades y experiencias. Conexión con una causa significativa: Formas parte de una comunidad comprometida con el cambio social. Experimentas el valor de servir y contribuir a una misión transformadora."
+        },
+        {
+          "question": "¿Qué modalidades de voluntariado existen en TESUAM?",
+          "answer": "TESUAM ofrece diversas formas de voluntariado según tu disponibilidad y habilidades: Presencial Permanente: Reside en la Fundación y participa activamente. Presencial Temporal: Apoya en jornadas de voluntariado puntuales. Virtual: Contribuye con capacitación, asesoría y proyectos a distancia. En especie o financiero: Apoya con donaciones materiales o económicas."
+        }
+      ]
+    },
+    "supportVideos": {
+      "videos": [
+        {
+          "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+          "title": "Voluntariado presencial",
+          "description": "Sé parte del cambio viviendo la experiencia TESUAM en la Amazonía colombiana.",
+          "buttonText": "Conoce más",
+          "modalContent": {
+            "title": "Modalidades:",
+            "content": [
+              "Permanente: Reside en la Fundación y participa activamente en la formación de las niñas",
+              "Temporal: Apoya en jornadas de voluntariado y actividades puntuales",
+              "Áreas de apoyo:",
+              " Docencia, psicología, medicina, odontología, trabajo social, derecho, enfermería, contabilidad.",
+              " Cocina, panadería, modistería, carpintería, agricultura.",
+              "Requisitos: Curso de capacitación impartido por TESUAM, y revisión de antecedentes para la seguridad de las niñas."
+            ]
+          }
+        },
+        {
+          "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+          "title": "Voluntariado virtual",
+          "description": "Ayuda desde cualquier parte del mundo con tu talento y conocimientos.",
+          "buttonText": "Conoce más",
+          "modalContent": {
+            "title": "¿Cómo puedes contribuir?",
+            "content": [
+              "Capacitación y asesoría en docencia, psicología, trabajo social, derecho, administración",
+              "Apoyo en la gestión de proyectos, redes sociales y difusión de la misión de TESUAM.",
+              "Desarrollo de mateirales educativos y contenido digital.",
+              "Requisitos: Disponibilidad de mínimo 5 horas al mes, y un curso de inducción online."
+            ]
+          }
+        }
+      ]
+    },
+    "faq": {
+      "title": "Preguntas frecuentes de soporte",
+      "subtitle": "Resuelve tus dudas sobre nuestro servicio de soporte",
+      "data": [
+        {
+          "question": "¿Dónde están ubicados?",
+          "answer": "TESUAM se encuentra en San José del Guaviare, en la Amazonía colombiana. Nuestra labor se desarrolla en un entorno natural donde brindamos protección, educación y oportunidades a niñas en situación de vulnerabilidad."
+        },
+        {
+          "question": "¿Cómo puedo donar?",
+          "answer": "Existen varias formas de donar a TESUAM: Donaciones en dinero: Haz tu aporte a través del botón 'Donar' en la parte superior derecha. Donaciones en especie: Contribuye con alimentos, ropa, útiles escolares o insumos esenciales."
+        },
+        {
+          "question": "¿Cómo se sostiene la fundación?",
+          "answer": "A través de donaciones, proyectos autosostenibles y el apoyo de la sociedad civil."
+        },
+        {
+          "question": "¿Puedo elegir en qué se usa mi donación?",
+          "answer": "Sí, puedes destinar tu donación a un área específica, como alimentación, educación, salud o proyectos autosostenibles. Si deseas hacerlo, contáctanos para coordinar tu aporte."
+        },
+        {
+          "question": "¿Puedo hacer una donación en nombre de otra persona o como empresa?",
+          "answer": "Sí, puedes hacer donaciones a nombre de alguien más o como empresa. También ofrecemos alianzas corporativas con reconocimiento y beneficios fiscales."
+        },
+        {
+          "question": "¿Puedo visitar la Fundación si soy donante?",
+          "answer": "Sí, puedes coordinar una visita para conocer el impacto de tu aporte. Contáctanos para agendar un recorrido por la Fundación y nuestras instalaciones."
+        },
+        {
+          "question": "¿Qué otros tipos de apoyo puedo brindar?",
+          "answer": "Además de donar dinero, puedes ayudar a TESUAM de diferentes maneras:Donaciones en especie (alimentos, ropa, útiles escolares).Voluntariado (presencial o virtual).Difusión en redes sociales para que más personas conozcan nuestra labor.Alianzas corporativas si representas a una empresa u organización."
+        }
+      ]
+    },
+    "bibleQuotation": {
+      "title": "\"Cada uno debe dar según lo que haya decidido en su corazón, no de mala gana ni por obligación, porque Dios ama al que da con alegría\"",
+      "quotation": "- 2 Corintios 9:7"
     }
   }
 }

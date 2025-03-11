@@ -15,15 +15,15 @@ export default function Projectspage() {
         <Projectsbanner />
         <StadisticsProjects />
         <HashtagBanner text="#TejiendoCambios" />
-        <BigMiniTitle title={phrases.titles[1].projectsyellow || "Default Title"} subtitle={phrases.titles[1].projectsred || "Default Subtitle"} />
+        <BigMiniTitle title={phrases.projects.bigminititle.title || "Default Title"} subtitle={phrases.projects.bigminititle.subtitle || "Default Subtitle"} />
         <ProjectsComponent images={imagesSet1} />
         <HashtagBanner text="#TejiendoCambios" />
-        <BigMiniTitle title={phrases.titles[1].projectsyellow || "Default Title"} subtitle={phrases.titles[1].projectsred || "Default Subtitle"} />
+        <BigMiniTitle title={phrases.projects.bigminititle.title || "Default Title"} subtitle={phrases.projects.bigminititle.subtitle || "Default Subtitle"} />
         <ProjectsComponent images={imagesSet2} />
         <HashtagBanner text="#TejiendoCambios" />
-        <BigMiniTitle title={phrases.titles[1].projectsyellow || "Default Title"} subtitle={phrases.titles[1].projectsred || "Default Subtitle"} />
+        <BigMiniTitle title={phrases.projects.bigminititle.title || "Default Title"} subtitle={phrases.projects.bigminititle.subtitle || "Default Subtitle"} />
         <ProjectsComponent images={imagesSet3} />
-        <BigMiniTitle title={phrases.titles[1].projectsyellow || "Default Title"} subtitle={phrases.titles[1].projectsred || "Default Subtitle"} />
+        <BigMiniTitle title={phrases.projects.bigminititle.title || "Default Title"} subtitle={phrases.projects.bigminititle.subtitle || "Default Subtitle"} />
         <ProjectsComponent images={imagesSet4} />
         <Projectsform />
       </div>

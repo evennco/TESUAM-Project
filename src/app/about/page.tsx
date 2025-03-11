@@ -1,4 +1,4 @@
-import SupportForm from '@/components/ui/support/SupportForm';
+import AboutForm from '@/components/ui/about/aboutForm';
 import Faq from '@/components/ui/homepage/faq';
 import Mision from '@/components/ui/about/mission';
 import Quienes from '@/components/ui/about/whoarewe';
@@ -18,12 +18,10 @@ export default function About() {
         <Quienes />
         <Mision />
         <SupportVideos />
-        {/* Equipo de trabajo en planta */}
-        {/* Equipo de trabajo ambulatorio */}
         <Faq />
         <BigTitle title="Enlaces de interés" subtitle="" />
             <Links images={imagesSet1} />
-        <SupportForm />
+        <AboutForm />
       </div>
     </main>
   );

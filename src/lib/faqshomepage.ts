@@ -31,17 +31,3 @@ export const volunteer = [
         answer: "Sí, recibimos visitas bajo previa coordinación. Contáctanos para programar una visita y conocer más sobre nuestro impacto."
     }
 ];
-export const supportvolunteer = [
-    {
-        question: "Como puedo ser voluntario?",
-        answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tristique suscipit met"
-    },
-    {
-        question: "Que actividades realizan los voluntarios?",
-        answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tristique suscipit met"
-    },
-    {
-        question: "Cuales son los requisitos para ser voluntario?",
-        answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tristique suscipit met"
-    }
-];
