@@ -15,16 +15,16 @@ export default function Projectspage() {
         <Projectsbanner />
         <StadisticsProjects />
         <HashtagBanner text="#TejiendoCambios" />
-        <BigMiniTitle title={phrases.titles[1].projectsyellow || "Default Title"} subtitle={phrases.titles[1].projectsred || "Default Subtitle"} />
-        <ProjectsComponent images={imagesSet1} />
+        <BigMiniTitle title={phrases.projects.bigminititle.title || "Default Title"} subtitle={phrases.projects.bigminititle.subtitle || "Default Subtitle"} />
+        <ProjectsComponent images={imagesSet1} offset={0} />
         <HashtagBanner text="#TejiendoCambios" />
-        <BigMiniTitle title={phrases.titles[1].projectsyellow || "Default Title"} subtitle={phrases.titles[1].projectsred || "Default Subtitle"} />
-        <ProjectsComponent images={imagesSet2} />
+        <BigMiniTitle title={phrases.projects.bigminititle.title || "Default Title"} subtitle={phrases.projects.bigminititle.subtitle || "Default Subtitle"} />
+        <ProjectsComponent images={imagesSet2} offset={3} />
         <HashtagBanner text="#TejiendoCambios" />
-        <BigMiniTitle title={phrases.titles[1].projectsyellow || "Default Title"} subtitle={phrases.titles[1].projectsred || "Default Subtitle"} />
-        <ProjectsComponent images={imagesSet3} />
-        <BigMiniTitle title={phrases.titles[1].projectsyellow || "Default Title"} subtitle={phrases.titles[1].projectsred || "Default Subtitle"} />
-        <ProjectsComponent images={imagesSet4} />
+        <BigMiniTitle title={phrases.projects.bigminititle.title || "Default Title"} subtitle={phrases.projects.bigminititle.subtitle || "Default Subtitle"} />
+        <ProjectsComponent images={imagesSet3} offset={6} />
+        <BigMiniTitle title={phrases.projects.bigminititle.title || "Default Title"} subtitle={phrases.projects.bigminititle.subtitle || "Default Subtitle"} />
+        <ProjectsComponent images={imagesSet4} offset={9} />
         <Projectsform />
       </div>
     </main>

@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import {parse} from "cookie";
+import { parse } from "cookie";
 import jwt from "jsonwebtoken";
 
 export function verifyJwtFromCookies(
@@ -20,7 +20,7 @@ export function verifyJwtFromCookies(
   }
 
   try {
-    const decoded = jwt.verify(jwtToken, process.env.JWT_SECRET_KEY as string) as { email: string };
+    const decoded = jwt.verify(jwtToken, process.env.JWT_SECRET as string) as { email: string };
     return decoded.email;
   } catch (error) {
     res.status(401).json({ success: false, message: "Token inválido o expirado. " + error });

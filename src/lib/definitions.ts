@@ -20,15 +20,16 @@ export interface InfiniteCarouselItem {
   src: StaticImageData;
 }
 
-export interface StadisticsCardProps {
-  value: number;
-  text: string;
-}
-
 export interface ProjectsCardProps {
   image: StaticImageData;
   title: string;
   text: string;
+  labels?: {
+    blue: string;
+    green: string;
+  };
+  hoverTitle?: string;
+  hoverText?: string;
 }
 
 export interface ProjectsComponentProps {
@@ -84,4 +85,17 @@ export interface StadisticsData {
   value: number;
   text: string;
   modalContent: ReactNode;
+}
+
+export interface StadisticsCardProps {
+  value: number;
+  text: string;
+  onOpenModal ?: () => void;
+}
+export interface VideocardProps {
+  videoUrl: string;
+  title: string;
+  description: string;
+  buttonText: string;
+  onButtonClick ?: () => void;
 }

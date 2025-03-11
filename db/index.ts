@@ -1,9 +1,34 @@
-import path from 'path';
-import { drizzle } from 'drizzle-orm/better-sqlite3';
-import Database from 'better-sqlite3';
-import * as schema from './schema';
+import type { NextApiRequest, NextApiResponse } from "next";
+import sql, { config as SqlConfig } from "mssql";
 
-const dbPath = path.join(process.cwd(), 'db', 'sqlite.db');
-const sqlite = new Database(dbPath); 
-export const db = drizzle(sqlite, { schema });
-export * from './schema';
+// Renombrar la constante para que no se llame "config"q
+export const dbConfig: SqlConfig = {
+  user: process.env.DB_USER as string,
+  password: process.env.DB_PASS as string,
+  database: process.env.DB_NAME as string,
+  server: process.env.DB_SERVER as string,
+  port: parseInt(process.env.DB_PORT ?? "1433", 10),
+  options: {
+    encrypt: true,
+    trustServerCertificate: false,
+  },
+};
+
+export async function connectToDatabase() {
+  try {
+    const pool = await sql.connect(dbConfig); // usar dbConfig
+    return pool;
+  } catch (error) {
+    console.error("❌ Error conectando a MSSQL en la nube:", error);
+    throw new Error("No se pudo conectar a la base de datos en la nube");
+  }
+}
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  try {
+    const pool = await connectToDatabase();
+    res.status(200).json({ message: "Conexión exitosa" });
+  } catch (error) {
+    res.status(500).json({ error: "Error conectando a la base de datos" });
+  }
+}

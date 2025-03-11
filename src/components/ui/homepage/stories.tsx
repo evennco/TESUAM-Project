@@ -8,20 +8,17 @@ const Stories: React.FC = () => {
   return (
     <section className="dark:bg-foundationcolorwhite bg-foundationcolorwhite">
       <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16">
-        <BigTitle title={phrases.titles[2].videosyellow || "Default Title"} subtitle={phrases.titles[2].videosred || "Default Subtitle"} />
+        <BigTitle title={phrases.homepage.stories.titles[0].videosyellow || "Default Title"} subtitle={phrases.homepage.stories.titles[0].videosred || "Default Subtitle"} />
         <div className="space-y-8 lg:grid lg:grid-cols-2 sm:gap-6 xl:gap-10 lg:space-y-0">
-          <VideoCard
-            videoUrl="https://www.youtube.com/embed/xiLEIyYWmd0"
-            title="Titulo 1"
-            description="Descripcion 1"
-            buttonText="Conoce más"
-          />
-          <VideoCard
-            videoUrl="https://www.youtube.com/embed/A59BBxBCIAM"
-            title="Titulo 2"
-            description="Descripcion 2"
-            buttonText="Conoce más"
-          />
+          {phrases.homepage.stories.videos.map((video, index) => (
+            <VideoCard
+              key={index}
+              videoUrl={index === 0 ? "https://www.youtube.com/embed/xiLEIyYWmd0" : "https://www.youtube.com/embed/A59BBxBCIAM"}
+              title={video.title}
+              description={video.description}
+              buttonText={video.buttonText}
+            />
+          ))}
         </div>
       </div>
     </section>

@@ -1,4 +1,5 @@
 import HashtagBanner from "../common/HashtagBanner";
+import phrases from '@/assets/locales/es.json';
 
 export default function WhoAreWe() {
   return (
@@ -10,13 +11,13 @@ export default function WhoAreWe() {
         <p className="text-sm text-foundationcoloryellow1 mt-2">
           ¿Quienes somos?
         </p>
-        <h2 className="text-3xl sm:text-4xl font-bold mt-2 mb-4 text-foundationcolorred1">
-          Fundación Tejiendo Sueños en la Amazonia
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mt-2 mb-4 text-foundationcolorred1">
+          {phrases.about.whoarewe.title}
         </h2>
-        <p className="text-lg text-foundationcoloryellow1 mt-2">
-          En TESUAM, transformamos vidas y tejemos esperanza.
+        <p className="text-lg sm:text-xl lg:text-2xl text-foundationcoloryellow1 mt-2">
+          {phrases.about.whoarewe.description}
         </p>
-        <p className="text-4x1 sm:text-lg font-medium mb-4">
+        <p className="text-base sm:text-lg lg:text-xl font-medium mb-4">
           <span className="mr-2" role="img" aria-label="handshake">
             ➤
           </span>
@@ -28,37 +29,14 @@ export default function WhoAreWe() {
         </p>
       </div>
 
-      <div className="grid grid-cols-3 gap-4 px-4 max-w-5xl mx-auto text-center py-8">
-        <div>
-          <h3 className="text-md text-foundationcolorred1 font-bold">Ubicados en</h3>
-          <h1 className="text-5xl  text-foundationcolorred1 font-bold">Guaviare, Colombia</h1>
-          <p className="text-2x1 mb-10">Nuestra sede de operaciones.</p>
-        </div>
-        <div>
-          <h3 className="text-md  text-foundationcoloryellow1 font-bold">Acciones con</h3>
-          <h1 className="text-5xl text-foundationcoloryellow1 font-bold">Impacto Social</h1>
-          <p className="text-2x1 mb-10">Por el bienestar de nuestra comunidad.</p>
-        </div>
-        <div>
-          <h3 className="text-md text-foundationcolorred1 font-bold">Revisa la</h3>
-          <h1 className="text-5xl text-foundationcolorred1 font-bold">Historia de la Fundación</h1>
-          <p className="text-2x1 mb-10">Transformando vidas desde 2022.</p>
-        </div>
-        <div>
-          <h3 className="text-md  text-foundationcoloryellow1 font-bold">Infórmate sobre</h3>
-          <h1 className="text-5xl text-foundationcoloryellow1 font-bold">Donaciones</h1>
-          <p className="text-2x1 ">Tienes el poder de cambiar una vida.</p>
-        </div>
-        <div>
-          <h3 className="text-md text-foundationcolorred1  font-bold">Trabajando por</h3>
-          <h1 className="text-5xl text-foundationcolorred1 font-bold">Desarrollo Sostenible</h1>
-          <p className="text-2x1 ">Juntos construimos un mejor país.</p>
-        </div>
-        <div>
-          <h3 className="text-md text-foundationcoloryellow1 font-bold">Infórmate sobre</h3>
-          <h1 className="text-5xl text-foundationcoloryellow1 font-bold">Voluntariado</h1>
-          <p className="text-2x1">Y otras maneras de ayudar.</p>
-        </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 px-4 max-w-5xl mx-auto text-center py-8">
+        {phrases.about.whoarewe.sections.map((section, index) => (
+          <div key={index}>
+            <h3 className="text-md sm:text-lg lg:text-xl text-foundationcolorred1 font-bold">{section.title}</h3>
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl text-foundationcolorred1 font-bold">{section.subtitle}</h1>
+            <p className="text-base sm:text-lg lg:text-xl mb-10">{section.description}</p>
+          </div>
+        ))}
       </div>
     </section>
   );
