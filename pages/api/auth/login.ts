@@ -1,10 +1,10 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { db, admins } from '@/db';
-import { eq } from 'drizzle-orm';
+import { dbConfig } from '@/db';
 import bcrypt from 'bcrypt';
 import { serialize } from 'cookie';
 import { sign } from 'jsonwebtoken';
 import { z } from 'zod';
+import sql from 'mssql';
 
 const getJwtSecret = (): string => {
     const secret = process.env.JWT_SECRET;
@@ -27,15 +27,22 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
 
     try {
-        // Parsear el body correctamente
         const body = typeof req.body === "string" ? JSON.parse(req.body) : req.body;
         const { username, password } = loginSchema.parse(body);
 
+        const pool = await sql.connect(dbConfig); 
+
         // Buscar al administrador en la base de datos
-        const admin = await db.select().from(admins).where(eq(admins.username, username)).get();
-        if (!admin) {
+        const result = await pool
+            .request()
+            .input('username', sql.NVarChar, username)
+            .query('SELECT id, username, password FROM admins WHERE username = @username');
+
+        if (result.recordset.length === 0) {
             return res.status(401).json({ message: 'Credenciales inválidas' });
         }
+
+        const admin = result.recordset[0];
 
         // Verificar la contraseña con bcrypt
         const passwordMatch = await bcrypt.compare(password, admin.password);
@@ -61,9 +68,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         // Enviar la cookie en el header
         res.setHeader('Set-Cookie', cookie);
         res.status(200).json({ message: 'Inicio de sesión exitoso' });
+
     } catch (error) {
-        console.error('Error en el inicio de sesión:', error);
-        const errorMessage = error instanceof Error ? error.message : 'Error desconocido en el servidor';
-        res.status(400).json({ message: errorMessage });
+        console.error('❌ Error en el inicio de sesión:', error);
+        res.status(500).json({ message: 'Error interno del servidor' });
     }
 }

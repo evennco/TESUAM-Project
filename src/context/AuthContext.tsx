@@ -1,6 +1,7 @@
 "use client"
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
+import jwt from 'jsonwebtoken';
 
 interface AuthContextProps {
   isAuthenticated: boolean;
@@ -15,10 +16,22 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const router = useRouter();
 
   useEffect(() => {
-    // Verificar si el usuario está autenticado al cargar la página
-    const token = document.cookie.split('; ').find(row => row.startsWith('token='));
-    if (token) {
+    const tokenCookie = document.cookie.split('; ').find(row => row.startsWith('token='));
+    if (!tokenCookie) return;
+
+    const token = tokenCookie.split('=')[1];
+
+    try {
+      const decoded = jwt.decode(token) as { exp?: number };
+      
+      if (!decoded || (decoded.exp && decoded.exp * 1000 < Date.now())) {
+        console.warn("Token inválido o expirado");
+        return;
+      }
+
       setIsAuthenticated(true);
+    } catch (error) {
+      console.error("Error al verificar el token:", error);
     }
   }, []);
 
@@ -27,10 +40,21 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     router.push('/');
   };
 
-  const logout = () => {
-    setIsAuthenticated(false);
-    document.cookie = 'token=; Max-Age=0; path=/;';
-    router.push('/login');
+  const logout = async () => {
+    try {
+        const response = await fetch('/api/logout', {
+            method: 'POST',
+        });
+
+        if (!response.ok) {
+            throw new Error('Error al cerrar sesión');
+        }
+
+        setIsAuthenticated(false);
+        router.push('/login');
+    } catch (error) {
+        console.error('Error al cerrar sesión:', error);
+    }
   };
 
   return (

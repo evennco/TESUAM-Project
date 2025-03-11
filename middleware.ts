@@ -1,25 +1,35 @@
-import { NextResponse } from 'next/server'
-import type { NextRequest } from 'next/server'
+import { NextResponse } from 'next/server';
+import type { NextRequest } from 'next/server';
 import jwt from 'jsonwebtoken';
 
-const SECRET_KEY = process.env.SECRET_KEY || 'your-secret-key';
+const JWT_SECRET = process.env.JWT_SECRET;
 
-export function middleware(request: NextRequest) {
-    const token = request .cookies.get('token')?.value;
-    if (!token) {
-      return NextResponse.redirect(new URL('/login', request.url)); // Redirecciona a la página de login si no hay token
-    }
-
-    try {
-      const decoded = jwt.verify(token, SECRET_KEY);
-      console.log('Token válido:', decoded);
-      return NextResponse.next(request); // si el token es valido
-  } catch (error) {
-      console.error('Token inválido o expirado:', error);
-      return NextResponse.redirect(new URL('/login', request.url));
+if (!JWT_SECRET) {
+  if (process.env.NODE_ENV === 'production') {
+    throw new Error('JWT_SECRET is not defined. The application cannot start without it.');
+  } else {
+    console.warn('Warning: JWT_SECRET is not defined. Using a default key for development.');
   }
 }
 
-export const config = {
-    matcher: ['/profile/:path*', '/dashboard:path'], // Estoy revisando esto con el tema del redireccionamiento a un posible crud
+export function middleware(request: NextRequest) {
+    const token = request.cookies.get('token')?.value;
+
+    if (!token) {
+        console.warn('No token found, redirecting to login.');
+        return NextResponse.redirect(new URL('/login', request.url)); // Redirecciona si no hay token
+    }
+
+    try {
+        const decoded = jwt.verify(token, JWT_SECRET as string);
+        console.log('Token válido:', decoded);
+        return NextResponse.next(); // Permite continuar si el token es válido
+    } catch (error) {
+        console.error('Token inválido o expirado:', error);
+        return NextResponse.redirect(new URL('/login', request.url)); // Redirige si el token es invalido
+    }
 }
+
+export const config = {
+    matcher: ['/profile/:path*', '/dashboard/:path*'], 
+};
