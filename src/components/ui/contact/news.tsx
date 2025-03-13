@@ -1,6 +1,40 @@
-import HashtagBanner from '@/components/ui/common/HashtagBanner';
+"use client";
+
+import { useState } from "react";
+import HashtagBanner from "@/components/ui/common/HashtagBanner";
 
 export default function News() {
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleSubscribe = async () => {
+    if (!email) {
+      setMessage("Por favor, ingresa un correo válido.");
+      return;
+    }
+
+    try {
+      const response = await fetch("/api/subscribe", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setMessage("¡Te has suscrito exitosamente!");
+        setEmail(""); 
+      } else {
+        setMessage(data.message || "Hubo un error al suscribirte.");
+      }
+    } catch (error) {
+      setMessage("Error de conexión. Inténtalo de nuevo.");
+    }
+  };
+
   return (
     <section id="boletin" className="bg-foundationcolorwhite dark:bg-foundationcolorwhite">
       <HashtagBanner text="#TESUAM" />
@@ -24,13 +58,19 @@ export default function News() {
         <div className="flex flex-wrap items-center gap-4">
           <input
             type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             placeholder="Ingresa tu correo"
             className="bg-white bg-opacity-70 rounded-full px-4 py-2 w-64 focus:outline-none"
           />
-          <button className="bg-foundationcolorred1 text-white px-6 py-2 rounded-full transition-colors">
+          <button
+            onClick={handleSubscribe}
+            className="bg-foundationcolorred1 text-white px-6 py-2 rounded-full transition-colors"
+          >
             Suscribirme
           </button>
         </div>
+        {message && <p className="text-sm mt-2 text-foundationcolorblack">{message}</p>}
         <p className="text-xs mt-2 text-foundationcolorblack text-opacity-50">
           Al suscribirte al boletín de novedades estás aceptando nuestros
           términos y condiciones y nuestra política de tratamiento de datos.
