@@ -24,7 +24,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
 
     try {
-        const decoded = jwt.verify(token, JWT_SECRET);
+        const decoded = jwt.verify(token, JWT_SECRET) as { role?: string };
+
+        if (!decoded || decoded.role !== 'admin') {
+            return res.status(403).json({ message: 'Forbidden: Admin access required' });
+        }
+
         console.log("Token verificado:", decoded); 
 
         const pool = await sql.connect(dbConfig);

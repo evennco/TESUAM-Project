@@ -1,7 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-import sql, { config as SqlConfig } from "mssql";
+import sql, { config as SqlConfig, ConnectionPool } from "mssql";
 
-// Renombrar la constante para que no se llame "config"q
 export const dbConfig: SqlConfig = {
   user: process.env.DB_USER as string,
   password: process.env.DB_PASS as string,
@@ -14,21 +13,26 @@ export const dbConfig: SqlConfig = {
   },
 };
 
-export async function connectToDatabase() {
+let pool: ConnectionPool | null = null;
+
+export async function connectToDatabase(): Promise<ConnectionPool> {
   try {
-    const pool = await sql.connect(dbConfig); // usar dbConfig
+    if (pool) {
+      return pool;
+    }
+    pool = await sql.connect(dbConfig);
     return pool;
   } catch (error) {
-    console.error("❌ Error conectando a MSSQL en la nube:", error);
-    throw new Error("No se pudo conectar a la base de datos en la nube");
+    console.error("Error al conectar a la base de datos:", error);
+    throw error;
   }
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     const pool = await connectToDatabase();
-    res.status(200).json({ message: "Conexión exitosa" });
+    res.status(200).json({ message: "Conectado correctamente" });
   } catch (error) {
-    res.status(500).json({ error: "Error conectando a la base de datos" });
+    res.status(500).json({ message: "Error al conectar a la base de datos" });
   }
 }

@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import jwt from 'jsonwebtoken';
@@ -21,17 +21,27 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
     const token = tokenCookie.split('=')[1];
 
+    if (!token) {
+      console.warn("Token no encontrado en la cookie");
+      return;
+    }
+
     try {
-      const decoded = jwt.decode(token) as { exp?: number };
-      
-      if (!decoded || (decoded.exp && decoded.exp * 1000 < Date.now())) {
-        console.warn("Token inválido o expirado");
+      const decoded = jwt.decode(token) as { exp?: number } | null;
+
+      if (!decoded) {
+        console.warn("No se pudo decodificar el token");
+        return;
+      }
+
+      if (decoded.exp && decoded.exp * 1000 < Date.now()) {
+        console.warn("Token expirado");
         return;
       }
 
       setIsAuthenticated(true);
     } catch (error) {
-      console.error("Error al verificar el token:", error);
+      console.error("Error al decodificar el token:", error);
     }
   }, []);
 
@@ -42,18 +52,18 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   const logout = async () => {
     try {
-        const response = await fetch('/api/logout', {
-            method: 'POST',
-        });
+      const response = await fetch('/api/logout', {
+        method: 'POST',
+      });
 
-        if (!response.ok) {
-            throw new Error('Error al cerrar sesión');
-        }
+      if (!response.ok) {
+        throw new Error('Error al cerrar sesión');
+      }
 
-        setIsAuthenticated(false);
-        router.push('/login');
+      setIsAuthenticated(false);
+      router.push('/login');
     } catch (error) {
-        console.error('Error al cerrar sesión:', error);
+      console.error('Error al cerrar sesión:', error);
     }
   };
 

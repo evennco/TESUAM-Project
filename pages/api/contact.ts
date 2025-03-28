@@ -1,5 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import { connectToDatabase } from "@/db";
+
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
     if (req.method !== "POST") {
         return res.status(405).json({ message: "Método no permitido" });
@@ -10,6 +11,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
         if (!subject || !name || !email || !message) {
             return res.status(400).json({ message: "Todos los campos son obligatorios" });
+        }
+
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            return res.status(400).json({ message: "Correo electrónico no válido" });
+        }
+
+        if (message.length > 1000) {
+            return res.status(400).json({ message: "El mensaje es demasiado largo" });
         }
 
         const pool = await connectToDatabase();
